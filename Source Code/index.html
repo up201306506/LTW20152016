@@ -3,9 +3,16 @@
 <head>
 	<meta charset="utf-8">
 	<title>LTW20152016</title>
-	<script src="jquery-1.11.3.min.js"></script>
 </head>
 <body>
-	<!--<iframe src="list_users.php"></iframe>-->
+	<div id="login">
+		<form action="list_users.php" method="get">
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username"><br>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password"><br>
+			<input type="submit" value="Log In">
+		</form>
+	</div>
 </body>
 </html>
