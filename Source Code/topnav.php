@@ -1,5 +1,6 @@
 <?php
-	echo '<form action="list_users.php" method="get">';
+	echo '<form action="profile.php" method="get">';
+		echo '<span id="logo">Eventerer™</span>';
 		echo '<label for="username">Username:</label>';
 		echo '<input type="text" id="username" name="username">';
 		echo '<label for="password">Password:</label>';

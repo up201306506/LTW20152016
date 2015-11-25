@@ -1,6 +1,6 @@
 <?php
 
-$db = new PDO("sqlite:Database/users.db");
+$db = new PDO('sqlite:Database/users.db');
 
 $stmt = $db->prepare('SELECT * FROM user WHERE id = 1');
 $stmt->execute();
