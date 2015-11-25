@@ -1,0 +1,17 @@
+html, body {
+ margin: 0px;
+ padding: 0px;
+ border: 0px;
+ }
+ 
+ #NavSpacing {
+	width: 100%;
+	height: 4em;
+}
+
+#FDS {
+	background-color: red;
+	width: 500px;
+	height: 10000px;
+	border-radius: 100%;
+}
