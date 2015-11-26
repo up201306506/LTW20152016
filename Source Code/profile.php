@@ -8,18 +8,39 @@
 </head>
 <body>
 	<?php
-	session_start();
-	include 'topnav.php';
-	
-	if(empty($_SESSION))
-	{
-		header('Location: index.php');
-	}
+		session_start();
+		include 'topnav.php';
 		
-
-	echo '<h1>Username: ' . $_SESSION['login_user'] . '</h1>';
-
+		if(empty($_SESSION))
+		{
+			header('Location: index.php');
+		}
+		echo '<h1>Username: ' . $_SESSION['login_user'] . '</h1>';
 	?>
 	<a href="logout.php">Log Out</a>
+	
+	<div class="EventDiv">
+		<?php 
+			include 'Database/event_connection.php';
+			$uservents = getEventsByUserID($_SESSION['login_user']);
+			
+			if (!empty($uservents))
+			{	
+				foreach($uservents as $row)
+				{
+					echo '<div class="EventBox">';
+							echo '<h2>' . $row['event_id'] . '<h2>';
+							echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
+							echo '<span class="EventType">' . $row['type'] . '<span><br>';
+							echo '<span class="EventUser"> Created by: '. $row['user_id'] . '<span><br>';
+							echo '<span class="EventDate">' . $row['date'] . '<span><br>';
+							echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
+							echo '<span>E ainda tem uma imagem!<span>';
+					echo '</div>';
+				}
+			}
+		?>
+	</div>
+	
 </body>
 </html>

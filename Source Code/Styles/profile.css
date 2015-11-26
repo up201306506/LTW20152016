@@ -9,3 +9,8 @@ body {
 	background-image: url("../Images/background.png");
 	background: contain;
 }
+
+.EventBox {
+	border: 2px solid red;
+	width: 25%;
+}
