@@ -12,9 +12,9 @@ if (isset($_POST['login'])) {
 		$password = $_POST['password'];
 
 		$user = getUserByUserID($username);
-		$pass = getUserPassword($password);
+		//$pass = getUserPassword($password);
 
-		if (!empty($user) && !empty($pass)) {
+		if (!empty($user) && $user['password'] == $password) {
 			$_SESSION['login_user'] = $username;
 			header('Location: profile.php');
 		} else {

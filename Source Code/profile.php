@@ -10,6 +10,12 @@
 	<?php
 	session_start();
 	include 'topnav.php';
+	
+	if(empty($_SESSION))
+	{
+		header('Location: index.php');
+	}
+		
 
 	echo '<h1>Username: ' . $_SESSION['login_user'] . '</h1>';
 
