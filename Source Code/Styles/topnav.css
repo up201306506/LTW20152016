@@ -7,7 +7,9 @@
 
 img {
 	margin-left: 0.5em;
-	margin-top: 0.75em;
+	margin-top: 0.5em;
+	height: 3.5em;
+	width: auto;
 }
 
 .navSpacing {
