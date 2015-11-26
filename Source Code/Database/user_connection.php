@@ -16,12 +16,12 @@ function getUserByUserID($ID) {
 	return $result;
 }
 
-function getUserPassword($pass) {
+function insertIntoUser($username, $password) {
 	$db_users = new PDO('sqlite:Database/users.db');
-	$stmt = $db_users->prepare('SELECT * FROM user WHERE password = ?');
-	$stmt->execute(array($pass));
-	$result = $stmt->fetch();
-	return $result;
+	$stmt = $db_users->prepare('INSERT INTO user VALUES (NULL, 0, :user, :pass)');
+	$stmt->bindParam(':user', $username);
+	$stmt->bindParam(':pass', $password);
+	$stmt->execute();
 }
 
 ?>

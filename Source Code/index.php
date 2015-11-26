@@ -1,5 +1,6 @@
 <?php
 include('login.php');
+include('signup.php');
 
 if(isset($_SESSION['login_user'])) {
 	header('Location: profile.php');
@@ -14,7 +15,7 @@ if(isset($_SESSION['login_user'])) {
 	<link rel="stylesheet" type="text/css" href="Styles/index.css">
 </head>
 <body>
-	<img src="Images/logo.png">
+	<img src="Images/Logo2.png">
 	<form action="" method="post">
 		<div class="username">
 			<input name="username" type="text" placeholder="USERNAME">
@@ -25,8 +26,8 @@ if(isset($_SESSION['login_user'])) {
 		<div class="login">
 			<input name="login" type="submit" value="LOG IN">
 		</div>
-		<div class="register">
-			<input name="register" type="submit" value="REGISTER">
+		<div class="signup">
+			<input name="signup" type="submit" value="SIGN UP">
 		</div>
 	</form>
 </body>
