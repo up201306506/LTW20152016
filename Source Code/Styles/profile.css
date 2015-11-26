@@ -1,15 +1,11 @@
 html, body {
-	margin: 0px;
-	padding: 0px;
-	border: 0px;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-	background-image: url("../Fotografia0109.jpg");
-	background-size: cover;
-}
-
-#NavSpacing {
-	width: 100%;
-	height: 4em;
+	background-image: url("../Images/background.png");
+	background: contain;
 }
