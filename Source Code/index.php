@@ -1,3 +1,11 @@
+<?php
+include('login.php');
+
+if(isset($_SESSION['login_user'])) {
+	header('Location: profile.php');
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,18 +15,18 @@
 </head>
 <body>
 	<img src="Images/logo.png">
-	<form action="profile.php" method="get">
+	<form action="" method="post">
 		<div class="username">
-			<input name="Username_Input" type="text" placeholder="USERNAME">
+			<input name="username" type="text" placeholder="USERNAME">
 		</div>
 		<div class="password">
-			<input name="Password_Input" type="password" placeholder="PASSWORD">
+			<input name="password" type="password" placeholder="PASSWORD">
 		</div>
 		<div class="login">
-			<input type="submit" value="LOG IN">
+			<input name="login" type="submit" value="LOG IN">
 		</div>
 		<div class="register">
-			<input type="submit" value="REGISTER">
+			<input name="register" type="submit" value="REGISTER">
 		</div>
 	</form>
 </body>
