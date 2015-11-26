@@ -11,3 +11,10 @@ INSERT INTO user VALUES (
 	'admin',
 	'password'
 );
+
+INSERT INTO user VALUES (
+	NULL,
+	0,
+	'OQUELHAS',
+	'obelhas'
+);

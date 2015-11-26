@@ -8,5 +8,19 @@
 </head>
 <body>
 	<?php include 'topnav.php'; ?>
+	<div class=User Info>
+		<?php 
+			$username = $_GET['Username_Input'];
+			include 'Database/user_connection.php';
+			$user = getUserByID($username);
+						
+			if (empty($user))
+				echo "EMPTY";
+			else
+				echo '<p id="username">' . 'USERNAME:' . $user['user_id'] . '</p>';
+
+			
+		?>
+	</div>
 </body>
 </html>

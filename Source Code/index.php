@@ -9,10 +9,10 @@
 	<img src="Images/logo.png">
 	<form action="profile.php" method="get">
 		<div class="username">
-			<input type="text" placeholder="USERNAME">
+			<input name="Username_Input" type="text" placeholder="USERNAME">
 		</div>
 		<div class="password">
-			<input type="password" placeholder="PASSWORD">
+			<input name="Password_Input" type="password" placeholder="PASSWORD">
 		</div>
 		<div class="login">
 			<input type="submit" value="LOG IN">
