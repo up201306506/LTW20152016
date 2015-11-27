@@ -9,15 +9,16 @@
 <body>
 	<?php
 		session_start();
-		include 'topnav.php';
-		
 		if(empty($_SESSION))
 		{
 			header('Location: index.php');
 		}
+
+		include 'topnav.php';
+
 		echo '<h1>Username: ' . $_SESSION['login_user'] . '</h1>';
 	?>
-	<a href="logout.php">Log Out</a>
+	
 	
 	<div class="EventDiv">
 		<?php 
