@@ -13,9 +13,9 @@ body {
 img {
 	position: absolute;
     top: 10%;
-    left: 21.5%;
-    width: auto;
-    height: 10em;
+    left: 25%;
+    width: 50%;
+    height: auto;
 }
 
 form {
