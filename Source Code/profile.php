@@ -15,8 +15,6 @@
 		}
 
 		include 'topnav.php';
-
-		echo '<h1>Username: ' . $_SESSION['login_user'] . '</h1>';
 	?>
 	
 	
