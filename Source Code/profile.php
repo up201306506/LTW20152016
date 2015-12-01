@@ -14,10 +14,10 @@
 			header('Location: index.php');
 		}
 
-		include 'topnav.php';
+		include 'PHP/topnav.php';
 	?>
 	
-	
+	<input type="button" value="Add Event">
 	<div class="EventDiv">
 		<?php 
 			include 'Database/event_connection.php';
@@ -40,6 +40,5 @@
 			}
 		?>
 	</div>
-	
 </body>
 </html>

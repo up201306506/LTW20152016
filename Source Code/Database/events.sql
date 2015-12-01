@@ -9,7 +9,14 @@ CREATE TABLE events (
 );
 
 INSERT INTO events VALUES (
-	NULL, 'TEST_EVENT', 'admin',
+	NULL, 'TEST_EVENT_1', 'admin',
+	'eventimage_default', '1999-01-01 00:00:01',
+	'TEST EVENT',
+	'Not Real'
+);
+
+INSERT INTO events VALUES (
+	NULL, 'TEST_EVENT_2', 'admin',
 	'eventimage_default', '1999-01-01 00:00:01',
 	'TEST EVENT',
 	'Not Real'

@@ -10,10 +10,17 @@ body {
 	background: contain;
 }
 
+input[type="button"] {
+	position: absolute;
+	margin-top: 1em;
+	left: 50%;
+	transform: translate(-50%);
+}
+
 .EventBox {
 	background-color: #FFFFFF;
 	margin-top: 3em;
-	margin-left: 3em;
+	margin-left: 2.65em;
 	float: left;
 	width: 45%;
 }
