@@ -12,8 +12,7 @@ body {
 
 img {
 	position: absolute;
-	position: fixed;
-    top: 10%;
+    top: 3%;
     left: 25%;
     width: 50%;
     height: auto;
@@ -23,46 +22,42 @@ form {
 	width: 25em;
 	height: 19em;
 	position: absolute;
-	position: fixed;
-	top: 50%;
+	/*position: fixed;*/
+	top: 35%;
 	left: 50%;
 	transform: translate(-50%,-50%);
 	font-family: sans-serif;
 	color: #FFFFFF;
+	width: 50%;
+	max-width: 25em; 
+	min-width: 20em;
+    height: auto;
+    text-align: center;
 }
 
 div {
-	height: 4.75em;
+
+	/*height: 4.75em;*/
 	width: 100%;
 }
 
-.username {
-	background-color: #4DAF7C;
-}
 
-.password {
-	background-color: #404241;
-}
-
-.login {
-	background-color: #E9C85D;
-}
-
-.signup {
-	background-color: #DB2E57;
-}
 
 input {
-	height: 1.3em;
-	width: 8em;
+	/*height: 1.3em;
+	width: 8em;*/
 	font-size: 1.5em;
 	text-align: center;
 	margin-top: 0.8625em;
-	margin-left: 4.25em;
+	margin-left: 0em;
 	border: 0.05em solid #FFFFFF;
 	outline: 0;
 	color: #FFFFFF;
 	background: transparent;
+	width: 50%;
+
+    height: auto;
+    left: 25%;
 }
 
 input[type="submit"] {
@@ -80,4 +75,50 @@ input[type="submit"] {
 
 ::-webkit-input-placeholder {
 	color: #FFFFFF;
+}
+
+/*----- Accordion -----*/
+.accordion, .accordion * {
+    -webkit-box-sizing:border-box; 
+    -moz-box-sizing:border-box; 
+    box-sizing:border-box;
+}
+ 
+.accordion {
+    overflow:hidden;
+
+    box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+    border-radius:3px;
+    background:#f7f7f7;
+}
+ 
+/*----- Section Titles -----*/
+.accordion-section-title {
+    width:100%;
+    padding:15px;
+    display:inline-block;
+    border-bottom:1px solid #1a1a1a;
+    background:#333;
+    transition:all linear 0.15s;
+    /* Type */
+    font-size:1.200em;
+    text-shadow:0px 1px 0px #1a1a1a;
+    color:#fff;
+}
+ 
+.accordion-section-title.active, .accordion-section-title:hover {
+    background:#4c4c4c;
+    /* Type */
+    text-decoration:none;
+}
+ 
+.accordion-section:last-child .accordion-section-title {
+    border-bottom:none;
+}
+ 
+/*----- Section Content -----*/
+.accordion-section-content {
+	background:#333;
+    padding:15px;
+    display:none;
 }

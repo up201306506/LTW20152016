@@ -3,6 +3,7 @@
 	height: 4em;
 	position: fixed;
 	background-color: #404241;
+	z-index: 1;
 }
 
 .Information

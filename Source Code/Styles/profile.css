@@ -14,14 +14,12 @@ input[type="button"] {
 	position: absolute;
 	margin-top: 1em;
 	left: 50%;
-	position: fixed;
 	transform: translate(-50%);
 }
 
 .eventDiv {
 	background-color: #FFFFFF;
 	position: absolute;
-	position: fixed;
 	width: 90%;
 	left: 50%;
 	top: 7em;

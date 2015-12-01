@@ -13,22 +13,48 @@ if(isset($_SESSION['login_user'])) {
 	<meta charset="utf-8">
 	<title>Eventerer™</title>
 	<link rel="stylesheet" type="text/css" href="Styles/index.css">
+	<script src="JQuery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="JQuery/accordion.js"></script>
 </head>
 <body>
 	<img src="Images/Logo2.png">
-	<form action="" method="post">
-		<div class="username">
-			<input name="username" type="text" placeholder="USERNAME">
-		</div>
-		<div class="password">
-			<input name="password" type="password" placeholder="PASSWORD">
-		</div>
-		<div class="login">
-			<input name="login" type="submit" value="LOG IN">
-		</div>
-		<div class="signup">
-			<input name="signup" type="submit" value="SIGN UP">
-		</div>
+
+	<form class="accordion" action="" method="post">
+
+			<div class="accordion-section">
+				<a class="accordion-section-title" href="#Login">Login</a>
+				<div id="Login" class="accordion-section-content">
+					<div class="username">
+						<input name="username_login" type="text" placeholder="USERNAME">
+					</div>
+
+					<div class="password">
+						<input name="password_login" type="password" placeholder="PASSWORD">
+					</div>
+
+					<div class="login">
+						<input name="login" type="submit" value="LOG IN">
+					</div>
+				</div>
+			</div>
+
+			<div class="accordion-section">
+				<a class="accordion-section-title" href="#Signup">Signup</a>
+				<div id="Signup" class="accordion-section-content">
+					<div class="username">
+						<input name="username_signup" type="text" placeholder="USERNAME">
+					</div>
+
+					<div class="password">
+						<input name="password_signup" type="password" placeholder="PASSWORD">
+					</div>
+
+					<div class="signup">
+						<input name="signup" type="submit" value="SIGN UP">
+					</div>
+				</div>
+			</div>
+			
 	</form>
 </body>
 </html>
