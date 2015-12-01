@@ -40,7 +40,7 @@ if (isset($_POST['Event_Submit']) and $once == true) {
 		
 		insertIntoEvents($event_id, $_SESSION['login_user'], $event_type, $event_description, $event_date, $image_path);
 		
-		$once == false;
+		$once = false;
 		header("refresh:3; url=profile.php");
 	
 		?>
