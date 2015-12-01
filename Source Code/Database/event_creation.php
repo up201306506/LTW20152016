@@ -1,7 +1,6 @@
 <?php
 
-//session_start();
-$error = '';
+$once = true;
 
 function insertIntoEvents($event_id, $user_id, $event_type, $event_description, $event_date, $image_path) {
 	$db_events = new PDO('sqlite:Database/events.db');
@@ -17,11 +16,19 @@ function insertIntoEvents($event_id, $user_id, $event_type, $event_description, 
 
 
 
-if (isset($_POST['Event_Submit'])) {
+if (isset($_POST['Event_Submit']) and $once == true) {
 	if (  /*empty($_POST['Event_image'])||*/ empty($_POST['Event_Date'])  || empty($_POST['Event_Type'])  
 		 || empty($_POST['Event_Description'])   || empty($_POST['Event_Id'])) 
 	{
-		$error = "Form isn't complete";
+	?>
+		<script>
+		$(function(){
+        showMessage("Form is not complete...");
+		});
+		
+		</script>
+	<?php
+		
 	} else 
 	
 	{
@@ -29,12 +36,23 @@ if (isset($_POST['Event_Submit'])) {
 		$event_type = $_POST['Event_Type'];
 		$event_description = $_POST['Event_Description'];
 		$event_date = $_POST['Event_Date'];
-		$image_path = "LEL";
+		$image_path = "eventimage_default";
 		
 		insertIntoEvents($event_id, $_SESSION['login_user'], $event_type, $event_description, $event_date, $image_path);
 		
-		//header("Location:index.php");
+		$once == false;
+		header("refresh:3; url=profile.php");
+	
+		?>
+			<script>
+			$(function(){
+			showMessage("Event Created. Redirecting...");
+			});			
+			</script>
+		 <?php
+	
 	}
 }
+	
 
 ?>

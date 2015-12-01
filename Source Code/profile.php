@@ -34,7 +34,7 @@
 						echo '<span class="EventUser"> Created by: '. $row['user_id'] . '<span><br>';
 						echo '<span class="EventDate">' . $row['date'] . '<span><br>';
 						echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
-						echo '<span>E ainda tem uma imagem!<span>';
+						echo '<span class="TROCAISTOPORUMATAGimg">' . $row['image_path'] . '<span>';
 					echo '</div>';
 				}
 			}
