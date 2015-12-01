@@ -17,7 +17,8 @@
 		include 'PHP/topnav.php';
 	?>
 	
-	<input type="button" value="Add Event">
+	<input Onclick="location.href = 'newevent.php';" type="button" value="Add Event" name="AddEventButton">
+	
 	<div class="EventDiv">
 		<?php 
 			include 'Database/event_connection.php';
