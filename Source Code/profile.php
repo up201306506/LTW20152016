@@ -17,7 +17,7 @@
 		include 'PHP/topnav.php';
 	?>
 	
-	<input Onclick="location.href = 'newevent.php';" type="button" value="Add Event" name="AddEventButton">
+	<input id="Add_event" Onclick="location.href = 'newevent.php';" type="button" value="Add Event" name="AddEventButton">
 	<div class="eventDiv">
 		<?php 
 			include 'Database/event_connection.php';
@@ -34,7 +34,8 @@
 						echo '<span class="EventUser"> Created by: '. $row['user_id'] . '<span><br>';
 						echo '<span class="EventDate">' . $row['date'] . '<span><br>';
 						echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
-						echo '<span class="TROCAISTOPORUMATAGimg">' . $row['image_path'] . '<span>';
+						echo '<span class="TROCAISTOPORUMATAGimg">' . $row['image_path'] . '<span><br>';
+						echo "<input Onclick='deleteEvent(".$row['event_id'].")' class='deletebutton' type='button' value='Delete Event'>";
 					echo '</div>';
 				}
 			}

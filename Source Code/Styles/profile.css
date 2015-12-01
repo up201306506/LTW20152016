@@ -10,7 +10,7 @@ body {
 	background: contain;
 }
 
-input[type="button"] {
+#Add_event{
 	position: absolute;
 	margin-top: 1em;
 	left: 50%;
