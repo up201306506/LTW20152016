@@ -14,13 +14,20 @@ input[type="button"] {
 	position: absolute;
 	margin-top: 1em;
 	left: 50%;
+	position: fixed;
 	transform: translate(-50%);
 }
 
-.EventBox {
+.eventDiv {
 	background-color: #FFFFFF;
-	margin-top: 3em;
-	margin-left: 2.65em;
-	float: left;
-	width: 45%;
+	position: absolute;
+	position: fixed;
+	width: 90%;
+	left: 50%;
+	top: 7em;
+	transform: translate(-50%);
+}
+
+.eventBox {
+	background-color: #4DAF7C;
 }

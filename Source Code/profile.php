@@ -18,8 +18,7 @@
 	?>
 	
 	<input Onclick="location.href = 'newevent.php';" type="button" value="Add Event" name="AddEventButton">
-	
-	<div class="EventDiv">
+	<div class="eventDiv">
 		<?php 
 			include 'Database/event_connection.php';
 			$uservents = getEventsByUserID($_SESSION['login_user']);
@@ -28,14 +27,14 @@
 			{	
 				foreach($uservents as $row)
 				{
-					echo '<div class="EventBox">';
-							echo '<h2>' . $row['event_id'] . '<h2>';
-							echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
-							echo '<span class="EventType">' . $row['type'] . '<span><br>';
-							echo '<span class="EventUser"> Created by: '. $row['user_id'] . '<span><br>';
-							echo '<span class="EventDate">' . $row['date'] . '<span><br>';
-							echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
-							echo '<span>E ainda tem uma imagem!<span>';
+					echo '<div class="eventBox">';
+						echo '<h2>' . $row['event_id'] . '<h2>';
+						echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
+						echo '<span class="EventType">' . $row['type'] . '<span><br>';
+						echo '<span class="EventUser"> Created by: '. $row['user_id'] . '<span><br>';
+						echo '<span class="EventDate">' . $row['date'] . '<span><br>';
+						echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
+						echo '<span>E ainda tem uma imagem!<span>';
 					echo '</div>';
 				}
 			}
