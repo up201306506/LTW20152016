@@ -1,3 +1,5 @@
+PRAGMA foreign_keys = ON;
+
 CREATE TABLE user (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	admin INTEGER,
@@ -11,6 +13,10 @@ CREATE TABLE events (
 	image_path VARCHAR,
 	date DATE,
 	description VARCHAR,
+	type VARCHAR
+);
+CREATE TABLE event_types (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	type VARCHAR
 );
 
@@ -39,4 +45,24 @@ INSERT INTO events VALUES (
 	'eventimage_default', '1999-01-01 00:00:01',
 	'TEST EVENT',
 	'Not Real'
+);
+INSERT INTO event_types VALUES (
+	NULL,
+	'Birthday Party'
+);
+INSERT INTO event_types VALUES (
+	NULL,
+	'Concert'
+);
+INSERT INTO event_types VALUES (
+	NULL,
+	'Parade'
+);
+INSERT INTO event_types VALUES (
+	NULL,
+	'Night Out'
+);
+INSERT INTO event_types VALUES (
+	NULL,
+	'Conference'
 );
