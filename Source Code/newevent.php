@@ -39,10 +39,11 @@
 		</form>
 		
 		<?php	
-			include'Database/event_creation.php';
+			include 'Database/event_connection.php';
+			include'PHP/event_creation.php';
 		?>
 		<br>
-		<span id="message">TEST</span>
+		<span id="message"></span>
 		
 	</div>
 </body>
