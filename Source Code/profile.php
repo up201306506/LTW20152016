@@ -23,8 +23,10 @@
 			include 'Database/event_connection.php';
 			$uservents = getEventsByUserID($_SESSION['login_user']);
 			
+			
 			if (!empty($uservents))
 			{	
+				include 'PHP/event_deletion.php';
 				foreach($uservents as $row)
 				{
 					echo '<div class="eventBox">';
@@ -35,7 +37,9 @@
 						echo '<span class="EventDate">' . $row['date'] . '<span><br>';
 						echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
 						echo '<span class="TROCAISTOPORUMATAGimg">' . $row['image_path'] . '<span><br>';
-						echo "<input Onclick='deleteEvent(".$row['event_id'].")' class='deletebutton' type='button' value='Delete Event'>";
+						echo '<form action="" method="post">';
+							echo "<button  name='Delete_button' class='deletebutton' value='".$row['id']."'>Delete Event</button>";
+						echo '</form>';
 					echo '</div>';
 				}
 			}
