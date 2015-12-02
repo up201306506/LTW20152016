@@ -13,18 +13,18 @@
 		{
 			header('Location: index.php');
 		}
-		
+		include 'Database/event_type_connection.php';
 		include 'Database/event_connection.php';
 		include 'PHP/topnav.php';
 		
-		
 		include "PHP/event_deletion.php";
+		
 	?>
 	<input id="Add_event" Onclick="location.href = 'newevent.php';" type="button" value="Add Event" name="AddEventButton">
 	<div class="eventDiv">
 		<?php 
 			$uservents = getEventsByUserID($_SESSION['login_user']);
-			
+			$eventtypes = getAllEventTypes();
 			
 			if (!empty($uservents))
 			{	
@@ -33,7 +33,7 @@
 					echo '<div class="eventBox">';
 						echo '<h2>' . $row['event_id'] . '<h2>';
 						echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
-						echo '<span class="EventType">' . $row['type'] . '<span><br>';
+						echo '<span class="EventType">' . $eventtypes[$row['type']]['type'] . '<span><br>';
 						echo '<span class="EventUser"> Created by: '. $row['user_id'] . '<span><br>';
 						echo '<span class="EventDate">' . $row['date'] . '<span><br>';
 						echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
