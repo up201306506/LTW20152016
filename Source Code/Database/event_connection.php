@@ -16,4 +16,17 @@ function getEventsByUserID($ID) {
 	return $result;
 }
 
+
+function insertIntoEvents($event_id, $user_id, $event_type, $event_description, $event_date, $image_path) {
+	$db_events = new PDO('sqlite:Database/events.db');
+	$stmt = $db_events->prepare('INSERT INTO events VALUES (NULL, :eventid, :user, :imagepath, :date, :description, :type)');
+	$stmt->bindParam(':eventid', $event_id);
+	$stmt->bindParam(':user', $user_id);
+	$stmt->bindParam(':imagepath', $image_path);
+	$stmt->bindParam(':date', $event_date);
+	$stmt->bindParam(':description', $event_description);
+	$stmt->bindParam(':type', $event_type);
+	$stmt->execute();
+}
+
 ?>
