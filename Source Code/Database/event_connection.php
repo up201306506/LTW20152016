@@ -1,7 +1,7 @@
 <?php
 
 function getAllEvents() {
-	$db_events = new PDO('sqlite:Database/events.db');
+	$db_events = new PDO('sqlite:Database/eventerer.db');
 	$stmt = $db_events->prepare('SELECT * FROM events');
 	$stmt->execute();
 	$result = $stmt->fetchAll();
@@ -9,7 +9,7 @@ function getAllEvents() {
 }
 
 function getEventsByUserID($ID) {
-	$db_events = new PDO('sqlite:Database/events.db');
+	$db_events = new PDO('sqlite:Database/eventerer.db');
 	$stmt = $db_events->prepare('SELECT * FROM events WHERE user_id = ?');
 	$stmt->execute(array($ID));
 	$result = $stmt->fetchAll();
@@ -17,7 +17,7 @@ function getEventsByUserID($ID) {
 }
 
 function existsEventByID($ID) {
-	$db_events = new PDO('sqlite:Database/events.db');
+	$db_events = new PDO('sqlite:Database/eventerer.db');
 	$stmt = $db_events->prepare('SELECT * FROM events WHERE id = ?');
 	$stmt->execute(array($ID));
 	$result = $stmt->fetchAll();
@@ -26,7 +26,7 @@ function existsEventByID($ID) {
 
 
 function insertIntoEvents($event_id, $user_id, $event_type, $event_description, $event_date, $image_path) {
-	$db_events = new PDO('sqlite:Database/events.db');
+	$db_events = new PDO('sqlite:Database/eventerer.db');
 	$stmt = $db_events->prepare('INSERT INTO events VALUES (NULL, :eventid, :user, :imagepath, :date, :description, :type)');
 	$stmt->bindParam(':eventid', $event_id);
 	$stmt->bindParam(':user', $user_id);
@@ -39,7 +39,7 @@ function insertIntoEvents($event_id, $user_id, $event_type, $event_description, 
 
 
 function deleteEvent($event_primary_id){
-	$db_events = new PDO('sqlite:Database/events.db');
+	$db_events = new PDO('sqlite:Database/eventerer.db');
 	$stmt = $db_events->prepare('DELETE FROM events WHERE id = ?');
 	$stmt->execute(array($event_primary_id));
 }

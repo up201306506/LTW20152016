@@ -1,7 +1,7 @@
 <?php
 
 function getAllUsers() {
-	$db_users = new PDO('sqlite:Database/users.db');
+	$db_users = new PDO('sqlite:Database/eventerer.db');
 	$stmt = $db_users->prepare('SELECT * FROM user');
 	$stmt->execute();
 	$result = $stmt->fetchAll();
@@ -9,7 +9,7 @@ function getAllUsers() {
 }
 
 function getUserByUserID($ID) {
-	$db_users = new PDO('sqlite:Database/users.db');
+	$db_users = new PDO('sqlite:Database/eventerer.db');
 	$stmt = $db_users->prepare('SELECT * FROM user WHERE user_id = ?');
 	$stmt->execute(array($ID));
 	$result = $stmt->fetch();
@@ -17,7 +17,7 @@ function getUserByUserID($ID) {
 }
 
 function insertIntoUser($username, $password) {
-	$db_users = new PDO('sqlite:Database/users.db');
+	$db_users = new PDO('sqlite:Database/eventerer.db');
 	$stmt = $db_users->prepare('INSERT INTO user VALUES (NULL, 0, :user, :pass)');
 	$stmt->bindParam(':user', $username);
 	$stmt->bindParam(':pass', $password);
