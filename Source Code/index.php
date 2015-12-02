@@ -25,7 +25,7 @@ if(isset($_SESSION['login_user'])) {
 				<a class="accordion-section-title" href="#Login">Login</a>
 				<div id="Login" class="accordion-section-content">
 					<div class="username">
-						<input class="usernamefocus" name="username_login" type="text" placeholder="USERNAME" autofocus>
+						<input id="usernamefocus1" name="username_login" type="text" placeholder="USERNAME">
 					</div>
 
 					<div class="password">
@@ -42,7 +42,7 @@ if(isset($_SESSION['login_user'])) {
 				<a class="accordion-section-title" href="#Signup">Signup</a>
 				<div id="Signup" class="accordion-section-content">
 					<div class="username">
-						<input class="usernamefocus" name="username_signup" type="text" placeholder="USERNAME" autofocus>
+						<input id="usernamefocus2" name="username_signup" type="text" placeholder="USERNAME">
 					</div>
 
 					<div class="password">

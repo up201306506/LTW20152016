@@ -11,7 +11,6 @@ $(document).ready(function() {
         var currentAttrValue = $(this).attr('href');
  
         if($(e.target).is('.active')) {
-            $('.usernamefocus').blur();
             close_accordion_section();
         }else {
             close_accordion_section();
@@ -20,8 +19,17 @@ $(document).ready(function() {
             $(this).addClass('active');
             // Open up the hidden content panel
             $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
-            //setTimeout(function () { $("#dvCreateItem").find("input:first").focus(); }, 1000);
-            $(".usernamefocus").focus();
+
+            if(currentAttrValue=="#Login")
+            {
+                $('#usernamefocus2').blur();
+                $("#usernamefocus1").focus();
+            }
+            else
+            {
+                $('#usernamefocus1').blur();
+                $("#usernamefocus2").focus();
+            }
         }
  
         e.preventDefault();
