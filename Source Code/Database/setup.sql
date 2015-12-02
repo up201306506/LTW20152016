@@ -13,7 +13,7 @@ CREATE TABLE events (
 	image_path VARCHAR,
 	date DATE,
 	description VARCHAR,
-	type VARCHAR
+	type Integer
 );
 CREATE TABLE event_types (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -38,13 +38,13 @@ INSERT INTO events VALUES (
 	NULL, 'TEST_EVENT_1', 'admin',
 	'eventimage_default', '1999-01-01 00:00:01',
 	'TEST EVENT',
-	'Not Real'
+	1
 );
 INSERT INTO events VALUES (
 	NULL, 'TEST_EVENT_2', 'admin',
 	'eventimage_default', '1999-01-01 00:00:01',
 	'TEST EVENT',
-	'Not Real'
+	1
 );
 INSERT INTO event_types VALUES (
 	NULL,

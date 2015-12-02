@@ -25,12 +25,13 @@
 			<label for="Event_Description">Descrição:</label><textarea name="Event_Description" id="Event_Description"></textarea> <br> 
 			<label for="Event_Type">Tipo de evento:</label>
 			<select name="Event_Type" id="Event_Type">
-				<option value="Festa de Anos">Festa de Anos</option>
-				<option value="Concerto">Concerto</option>
-				<option value="Pool Party">Pool Party</option>
-				<option value="Piquenique">Piquenique</option>
-				<option value="Palestras">Palestras</option>
-				<option value="Jogo">Jogo</option>
+				<?php include 'Database/event_type_connection.php' ;
+				$type_list = getAllEventTypes();
+				foreach($type_list as $options)
+				{
+					echo "<option value='".$options['id']."'>".$options['type']."</option>";
+				}
+				?>
 			</select><br>
 			<label for="Event_Date">Data:</label><input type="date" name="Event_Date" id="Event_Date"><br>
 			<label for="Event_image">Imagem:</label><input type="file" name="Event_image" id="Event_image"><br>
