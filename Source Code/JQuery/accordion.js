@@ -5,10 +5,13 @@ $(document).ready(function() {
     }
  
     $('.accordion-section-title').click(function(e) {
+        
+
         // Grab current anchor value
         var currentAttrValue = $(this).attr('href');
  
         if($(e.target).is('.active')) {
+            $('.usernamefocus').blur();
             close_accordion_section();
         }else {
             close_accordion_section();
@@ -16,7 +19,9 @@ $(document).ready(function() {
             // Add active class to section title
             $(this).addClass('active');
             // Open up the hidden content panel
-            $('.accordion ' + currentAttrValue).slideDown(300).addClass('open'); 
+            $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
+            //setTimeout(function () { $("#dvCreateItem").find("input:first").focus(); }, 1000);
+            $(".usernamefocus").focus();
         }
  
         e.preventDefault();
