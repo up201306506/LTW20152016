@@ -16,14 +16,14 @@
 	line-height: 90%;
 }
 
-#topnavimg {
+#topnavimg{
 	margin-left: 0.5em;
 	margin-top: 0.5em;
 	height: 3.5em;
 	width: auto;
 }
 
-#topnavusername {
+.topnavtext{
 	padding-right: 1em;
 }
 
