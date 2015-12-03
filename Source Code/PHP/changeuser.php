@@ -8,9 +8,11 @@ if (isset($_POST['submit_username'])) {
 		echo "2";
 		$error = 'Username is invalid!';
 	} else {
-		$username = $_SESSION['login_user'];
+		$Userid = $_SESSION['user_id'];
 		$newusername = $_POST['newusername'];
-		changeUsername($username, $newusername);
+		changeUsername($Userid, $newusername);
+		$_SESSION['login_user'] = $newusername;
+		header("Location:profile.php");
 	}
 }
 

@@ -32,10 +32,10 @@ function insertIntoUser($username, $password) {
 	$stmt->execute();
 }
 
-function changeUsername($username, $newusername) {
+function changeUsername($userid, $newusername) {
 	$db_users = new PDO('sqlite:Database/eventerer.db');
-	$stmt = $db_users->prepare('UPDATE user SET user_id = :new_user_name WHERE user_id = :user_name');
-	$stmt->bindParam(':user_name', $username);
+	$stmt = $db_users->prepare('UPDATE user SET user_id = :new_user_name WHERE id = :user_name');
+	$stmt->bindParam(':user_name', $userid);
 	$stmt->bindParam(':new_user_name', $newusername);
 	$stmt->execute();
 }
