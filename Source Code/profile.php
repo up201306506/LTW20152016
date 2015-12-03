@@ -37,7 +37,7 @@
 						echo '<span class="EventUser"> Created by: '. $row['user_id'] . '<span><br>';
 						echo '<span class="EventDate">' . $row['date'] . '<span><br>';
 						echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
-						echo '<span class="TROCAISTOPORUMATAGimg">' . $row['image_path'] . '<span><br>';
+						echo '<img src="Images/Event/'.$row['image_path'].'.jpg" alt="image_'.$row['event_id'].'" class="event_image"/>';
 						echo '<form action="" method="post">';
 							echo "<button name='Delete_button' class='deletebutton' value='" . $row['id'] . "'>Delete Event</button>";
 						echo '</form>';
