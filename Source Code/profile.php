@@ -43,7 +43,7 @@
 						echo '<div class="eventBox">';
 							echo '<a href="event.php?id=' . $row['id'] . '"><span>' . $row['event_id'] . '<span></a><br>';
 							echo '<span class="EventType">' . $eventtypes[$row['type']]['type'] . '<span><br>';
-							echo '<span class="EventUser"> Created by: '. $creator['user_id'] . '<span><br>';
+							echo '<span class="EventUser"> Created by: '. $creator['user_name'] . '<span><br>';
 							echo '<span class="EventDate">' . $row['date'] . '<span><br>';
 							echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
 							echo '<img src="Images/Event/'.$row['image_path'].'.jpg" alt="image_'.$row['event_id'].'" class="event_image"/>';

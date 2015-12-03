@@ -32,7 +32,7 @@
 			?>
 				<div class="eventBox">
 					<h1><?php echo $this_event['event_id'];?></h3>
-					<span class="EventCreator"> Creator: <?php echo getUserByID($this_event['user_id'])['user_id']; ?></span><br>
+					<span class="EventCreator"> Creator: <?php echo getUserByID($this_event['user_id'])['user_name']; ?></span><br>
 					<span class="EventType"> <?php echo $eventtype['type']; ?></span><br>
 					<span class="EventDate"> Date: <?php echo $this_event['date']; ?></span><br>
 					<img class="EventImg" src="Images/Event/<?php echo $this_event['image_path']; ?>.jpg"/><br>

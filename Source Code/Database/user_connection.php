@@ -16,9 +16,9 @@ function getUserByID($ID) {
 	return $result;
 }
 
-function getUserByUserID($ID) {
+function getUserByUserName($ID) {
 	$db_users = new PDO('sqlite:Database/eventerer.db');
-	$stmt = $db_users->prepare('SELECT * FROM user WHERE user_id = ?');
+	$stmt = $db_users->prepare('SELECT * FROM user WHERE user_name = ?');
 	$stmt->execute(array($ID));
 	$result = $stmt->fetch();
 	return $result;
@@ -34,7 +34,7 @@ function insertIntoUser($username, $password) {
 
 function changeUsername($userid, $newusername) {
 	$db_users = new PDO('sqlite:Database/eventerer.db');
-	$stmt = $db_users->prepare('UPDATE user SET user_id = :new_user_name WHERE id = :user_name');
+	$stmt = $db_users->prepare('UPDATE user SET user_name = :new_user_name WHERE id = :user_name');
 	$stmt->bindParam(':user_name', $userid);
 	$stmt->bindParam(':new_user_name', $newusername);
 	$stmt->execute();

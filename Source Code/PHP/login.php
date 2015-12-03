@@ -10,7 +10,7 @@ if (isset($_POST['login'])) {
 	} else {
 		$username = $_POST['username_login'];
 		$password = $_POST['password_login'];
-		$user = getUserByUserID($username);
+		$user = getUserByUserName($username);
 
 		if (!empty($user) && $user['password'] == $password) {
 			$_SESSION['login_user'] = $username;

@@ -3,7 +3,7 @@ PRAGMA foreign_keys = ON;
 CREATE TABLE user (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	admin INTEGER,
-	user_id VARCHAR,
+	user_name VARCHAR,
 	password VARCHAR
 );
 CREATE TABLE events (
