@@ -36,8 +36,18 @@
 					<span class="EventType"> <?php echo $eventtype['type']; ?></span><br>
 					<span class="EventDate"> Date: <?php echo $this_event['date']; ?></span><br>
 					<img class="EventImg" src="Images/Event/<?php echo $this_event['image_path']; ?>.jpg"/><br>
+					
 					<span class="EventDescription"> Descripion: <?php echo $this_event['description']; ?></span><br>
 					
+					<form action="PHP/imageupload.php" method="post" enctype="multipart/form-data">
+						<label for="ImageUpload">Change Image:</label>
+						<input type="file" name="ImageUpload" id="ImageUpload">
+						<input type="submit" value="Upload Image" name="submit">
+					</form>
+					
+					<input class="EditEventButton" Onclick="location.href = 'editevent.php';" type="button" value="Edit Event" name="EditEventButton">
+	
+							
 				</div>
 			<?php
 		}
@@ -45,6 +55,8 @@
 		{
 			?>
 				<h3>No event exists on this page.</h3>
+				<p>But you may create an event if you wish to do so - <input class="add_event" Onclick="location.href = 'newevent.php';" type="button" value="Add Event" name="AddEventButton">
+	</p>
 			
 		
 			<?php
