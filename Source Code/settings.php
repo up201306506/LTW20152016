@@ -54,9 +54,15 @@
 			<div class="accordion-section">
 				<a class="accordion-section-title" href="#ChangePassword">Change Password</a>
 				<div id="ChangePassword" class="accordion-section-content">
+
+					<div class="password">
+						<label for="password">Password</label>
+						<input id="password" name="password" type="password">
+					</div>
+
 					<div class="new_password">
 						<label for="newpassword">New Password</label>
-						<input id="newpassword" name="newpassword" type="text">
+						<input id="newpassword" name="newpassword" type="password">
 					</div>
 
 					<div class="submit_password">
