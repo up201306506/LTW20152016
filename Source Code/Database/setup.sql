@@ -19,7 +19,13 @@ CREATE TABLE event_types (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	type VARCHAR
 );
-
+CREATE TABLE user_attends_event (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	u_id INTEGER,
+	e_id INTEGER,
+	FOREIGN KEY (u_id) REFERENCES user(id) ON DELETE CASCADE,
+	FOREIGN KEY (e_id) REFERENCES events(id) ON DELETE CASCADE
+);
 
 
 INSERT INTO user VALUES (
@@ -65,4 +71,19 @@ INSERT INTO event_types VALUES (
 INSERT INTO event_types VALUES (
 	NULL,
 	'Conference'
+);
+INSERT INTO user_attends_event VALUES (
+	NULL,
+	1,
+	1
+);
+INSERT INTO user_attends_event VALUES (
+	NULL,
+	1,
+	2
+);
+INSERT INTO user_attends_event VALUES (
+	NULL,
+	2,
+	1
 );

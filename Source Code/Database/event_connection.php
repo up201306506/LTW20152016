@@ -14,6 +14,13 @@ function getEventsByUserID($ID) {
 	$result = $stmt->fetchAll();
 	return $result;
 }
+function getEventsUserAttends($User_ID) {
+	$db_events = new PDO('sqlite:Database/eventerer.db');
+	$stmt = $db_events->prepare('SELECT * FROM events WHERE id in (SELECT e_id FROM user_attends_event WHERE u_id = ?)');
+	$stmt->execute(array($ID));
+	$result = $stmt->fetchAll();
+	return $result;
+}
 function existsEventByID($ID) {
 	$db_events = new PDO('sqlite:Database/eventerer.db');
 	$stmt = $db_events->prepare('SELECT * FROM events WHERE id = ?');
