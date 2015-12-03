@@ -35,8 +35,9 @@ function getEventByID($ID) {
 	$result = $stmt->fetch();
 	return $result;
 }
-function insertIntoEvents($event_id, $user_id, $event_type, $event_description, $event_date, $image_path) {
+function insertIntoEvents($event_id, $user_id, $event_type, $event_description, $event_day, $event_month, $event_year, $image_path) {
 	$db_events = new PDO('sqlite:Database/eventerer.db');
+	$event_date = $event_year . '-' . $event_month . '-' . $event_day;
 	$stmt = $db_events->prepare('INSERT INTO events VALUES (NULL, :eventid, :user, :imagepath, :date, :description, :type)');
 	$stmt->bindParam(':eventid', $event_id);
 	$stmt->bindParam(':user', $user_id);
@@ -51,7 +52,5 @@ function deleteEvent($event_primary_id){
 	$stmt = $db_events->prepare('DELETE FROM events WHERE id = ?');
 	$stmt->execute(array($event_primary_id));
 }
-
-
 
 ?>

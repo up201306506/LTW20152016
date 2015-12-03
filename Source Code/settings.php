@@ -22,19 +22,6 @@
 		include 'PHP/changepass.php';
 
 	?>
-
-
-
-
-
-	<!--<a class="Text" href="#ChangeUsername">Change Username</a><br>
-	<a class="Text" href="#ChangePassword">Change Password</a><br>
-	<a class="Text" href="#DeleteAccount">Delete Account</a><br>
-	<div id="ChangeUsername">
-		<span id="message">The Event has been deleted</span>;
-	</div>-->
-
-
 	<form class="accordion" action="" method="post">
 
 			<div class="accordion-section">
@@ -69,28 +56,7 @@
 						<input name="submit_password" type="submit" value="Ok">
 					</div>
 				</div>
-			</div>
-
-			<!--<div class="accordion-section">
-				<a class="accordion-section-title" href="#DeleteAccount">Delete Account</a>
-				<div id="DeleteAccount" class="accordion-section-content">
-					<div class="username">
-						<input id="usernamefocus2" name="username_signup" type="text" placeholder="USERNAME">
-					</div>
-
-					<div class="password">
-						<input name="password_signup" type="password" placeholder="PASSWORD">
-					</div>
-
-					<div class="signup">
-						<input name="signup" type="submit" value="SIGN UP">
-					</div>
-				</div>
-			</div>-->
-			
+			</div>			
 	</form>
-
-
-
 </body>
 </html>

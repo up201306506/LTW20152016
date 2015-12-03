@@ -35,7 +35,10 @@
 					}
 				?>
 			</select><br>
-			Data:<input class="day" type="text">/<input class="month" type="text">/<input class="year" type="text"><br>
+			<label for="date">Date:</label>
+			<div id="date">
+				<input name="day" class="day" type="text">/<input name="month" class="month" type="text">/<input name="year" class="year" type="text">
+			</div>
 			<input type="submit" name="Event_Submit">
 		</form>
 
