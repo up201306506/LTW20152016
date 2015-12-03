@@ -10,6 +10,8 @@ body {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
+    font-family: sans-serif;
+    font-family: 'Jura', sans-serif;
 }
 
 .accordion, .accordion * {
@@ -34,6 +36,7 @@ body {
     background: #333;
     transition: all linear 0.15s;
     font-size: 1.200em;
+    font
     text-shadow: 0px 1px 0px #1a1a1a;
     color: #fff;
 }
@@ -54,5 +57,11 @@ body {
 	background: #333;
     padding: 15px;
     display: none;
+}
+
+.textbox
+{
+    position: absolute;
+    left: 15%;
 }
 

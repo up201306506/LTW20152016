@@ -40,12 +40,12 @@
 			<div class="accordion-section">
 				<a class="accordion-section-title" href="#ChangeUsername">Change Username</a>
 				<div id="ChangeUsername" class="accordion-section-content">
-					<div class="new_username">
-						<label for="newusername">New Username</label>
-						<input id="newusername" name="newusername" type="text">
+					<div class="text">
+						<label for="newusername"><b>New Username</b></label>
+						<input class="textbox" id="newusername" name="newusername" type="text">
 					</div>
-
-					<div>
+					<br>
+					<div class="button">
 						<input name="submit_username" type="submit" value="Ok">
 					</div>
 				</div>
@@ -55,17 +55,17 @@
 				<a class="accordion-section-title" href="#ChangePassword">Change Password</a>
 				<div id="ChangePassword" class="accordion-section-content">
 
-					<div class="password">
+					<div class="text">
 						<label for="password">Password</label>
-						<input id="password" name="password" type="password">
+						<input class="textbox" id="password" name="password" type="password">
 					</div>
-
-					<div class="new_password">
+					<br>
+					<div class="text">
 						<label for="newpassword">New Password</label>
-						<input id="newpassword" name="newpassword" type="password">
+						<input class="textbox" id="newpassword" name="newpassword" type="password">
 					</div>
-
-					<div class="submit_password">
+					<br>
+					<div class="button">
 						<input name="submit_password" type="submit" value="Ok">
 					</div>
 				</div>
