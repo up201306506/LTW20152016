@@ -40,4 +40,11 @@ function changeUsername($userid, $newusername) {
 	$stmt->execute();
 }
 
+function changePassword($userid, $newpassword) {
+	$db_users = new PDO('sqlite:Database/eventerer.db');
+	$stmt = $db_users->prepare('UPDATE user SET password = :new_password WHERE id = :user_id');
+	$stmt->bindParam(':user_id', $userid);
+	$stmt->bindParam(':new_password', $newpassword);
+	$stmt->execute();
+}
 ?>
