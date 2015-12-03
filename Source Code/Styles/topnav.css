@@ -18,15 +18,20 @@ ul {
 }
 
 .search_bar {
-	width: 15%;
-	display: inline-block;
+	top: 50%;
+	left: 50%;
+	outline: 0;
+	width: 20%;
+	height: 1.5em;
+	position: absolute;
+	transform: translate(-50%, -50%);
 }
 
 .home_icon {
 	width: 3em;
 	height: 100%;
 	float: left;
-	display: inline-block;
+	display: block;
 }
 
 img {
@@ -34,20 +39,11 @@ img {
 	height: 100%;
 }
 
-.wrapper {
-	float: right;
-	display: inline-block;
-}
-
-li {
-	float: right;
-	display: block;
-	margin-top: 1em;
-}
-
 li a {
+	float: right;
 	color: white;
 	padding: 1em;
+	display: block;
 	text-decoration: none;
 }
 
