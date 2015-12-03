@@ -6,24 +6,36 @@ html, body {
 }
 
 body {
-	background-image: url("../Images/background.png");
-	background: contain;
+	background-image: url("../Images/background.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .add_event {
-	left: 50%;
-	top: 5.5em;
-	position: absolute;
-	transform: translate(-50%);
+	outline: 0;
+	padding: 0;
+	width: 10em;
+	height: 3em;
+	border: none;
+	color: white;
+	font-size: 1em;
+	display: block;
+	margin: 1em auto;
+	background-color: #333;
+	font-family: 'Jura', sans-serif;
+}
+
+.add_event:hover {
+	background-color: #4c4c4c;
 }
 
 .eventDiv {
-	background-color: #FFFFFF;
-	position: absolute;
-	width: 90%;
-	left: 50%;
-	top: 6em;
-	transform: translate(-50%);
+	width: 80%;
+	height: 200%;
+	margin: auto;
+	display: block;
+	background-color: #333;
 }
 
 .eventBox {

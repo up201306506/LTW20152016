@@ -6,8 +6,10 @@ html, body {
 }
 
 body {
-	background-image: url("../Images/background.png");
-	background: contain;
+	background-image: url("../Images/background.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 img {
@@ -26,6 +28,7 @@ form {
 	font-family: sans-serif;
 	width: 25em;
     text-align: center;
+    font-family: 'Jura', sans-serif;
 }
 
 input {
@@ -38,6 +41,7 @@ input {
 	background: transparent;
 	width: 50%;
     left: 25%;
+    font-family: 'Jura', sans-serif;
 }
 
 input[type="submit"] {

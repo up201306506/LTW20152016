@@ -5,6 +5,7 @@
 	<title>Profile</title>
 	<link rel="stylesheet" type="text/css" href="Styles/topnav.css">
 	<link rel="stylesheet" type="text/css" href="Styles/settings.css">
+	<link href='https://fonts.googleapis.com/css?family=Jura:600' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<?php

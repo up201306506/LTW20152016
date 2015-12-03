@@ -18,32 +18,30 @@
 		include 'Database/event_connection.php';
 		include 'PHP/topnav.php';
 		include 'PHP/event_deletion.php';
-		
 	?>
 	<input class="add_event" Onclick="location.href = 'newevent.php';" type="button" value="Add Event" name="AddEventButton">
 	<div class="eventDiv">
-		<?php 
-			$uservents = getEventsByUserID($_SESSION['login_user']);
-			$eventtypes = getAllEventTypes();
+		<?php
+			// $uservents = getEventsByUserID($_SESSION['login_user']);
+			// $eventtypes = getAllEventTypes();
 			
-			if (!empty($uservents))
-			{	
-				foreach($uservents as $row)
-				{
-					echo '<div class="eventBox">';
-						echo '<h2>' . $row['event_id'] . '<h2>';
-						echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
-						echo '<span class="EventType">' . $eventtypes[$row['type']]['type'] . '<span><br>';
-						echo '<span class="EventUser"> Created by: '. $row['user_id'] . '<span><br>';
-						echo '<span class="EventDate">' . $row['date'] . '<span><br>';
-						echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
-						echo '<img src="Images/Event/'.$row['image_path'].'.jpg" alt="image_'.$row['event_id'].'" class="event_image"/>';
-						echo '<form action="" method="post">';
-							echo "<button name='Delete_button' class='deletebutton' value='" . $row['id'] . "'>Delete Event</button>";
-						echo '</form>';
-					echo '</div>';
-				}
-			}
+			// if (!empty($uservents))
+			// {	
+			// 	foreach($uservents as $row)
+			// 	{
+			// 		echo '<div class="eventBox">';
+			// 			echo '<a href="event.php?id=' . $row['id'] . '"><h2>' . $row['event_id'] . '<h2></a>';
+			// 			echo '<span class="EventType">' . $eventtypes[$row['type']]['type'] . '<span><br>';
+			// 			echo '<span class="EventUser"> Created by: '. $row['user_id'] . '<span><br>';
+			// 			echo '<span class="EventDate">' . $row['date'] . '<span><br>';
+			// 			echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
+			// 			echo '<img src="Images/Event/'.$row['image_path'].'.jpg" alt="image_'.$row['event_id'].'" class="event_image"/>';
+			// 			echo '<form action="" method="post">';
+			// 				echo "<button name='Delete_button' class='deletebutton' value='" . $row['id'] . "'>Delete Event</button>";
+			// 			echo '</form>';
+			// 		echo '</div>';
+			// 	}
+			// }
 		?>
 	</div>
 </body>
