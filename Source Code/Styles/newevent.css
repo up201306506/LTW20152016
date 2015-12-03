@@ -12,10 +12,6 @@ body {
 	background-size: cover;
 }
 
-.day, .month {
-	width: 1.5em;
-}
-
-.year {
-	width: 2.5em;
+h3, form {
+	font-family: 'Jura', sans-serif;
 }

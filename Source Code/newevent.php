@@ -18,6 +18,7 @@
 		}
 
 		include 'PHP/topnav.php';
+		include 'PHP/date.php';
 	?>
 		<h3>Add New Event</h3>
 		<form action="" method="post"> 
@@ -37,12 +38,14 @@
 			</select><br>
 			<label for="date">Date:</label>
 			<div id="date">
-				<input name="day" class="day" type="text">/<input name="month" class="month" type="text">/<input name="year" class="year" type="text">
+				<select name="day" class="day"><?php dayOptions(); ?></select>
+				<select name="month" class="month"><?php monthOptions(); ?></select>
+				<select name="year" class="year"><?php yearOptions(); ?></select>
 			</div>
 			<input type="submit" name="Event_Submit">
 		</form>
 
-		<?php	
+		<?php
 			include 'Database/event_connection.php';
 			include'PHP/event_creation.php';
 		?>
