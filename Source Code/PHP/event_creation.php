@@ -24,7 +24,7 @@ if (isset($_POST['Event_Submit']) and $once == true) {
 		$event_date = $_POST['Event_Date'];
 		$image_path = "eventimage_default";
 		
-		insertIntoEvents($event_id, $_SESSION['login_user'], $event_type, $event_description, $event_date, $image_path);
+		insertIntoEvents($event_id, $_SESSION['user_id'], $event_type, $event_description, $event_date, $image_path);
 		
 		$once = false;
 		header("refresh:3; url=profile.php");

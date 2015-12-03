@@ -9,7 +9,7 @@ CREATE TABLE user (
 CREATE TABLE events (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	event_id VARCHAR,
-	user_id VARCHAR,
+	user_id INTEGER REFERENCES user(id),
 	image_path VARCHAR,
 	date DATE,
 	description VARCHAR,
@@ -35,13 +35,13 @@ INSERT INTO user VALUES (
 	'obelhas'
 );
 INSERT INTO events VALUES (
-	NULL, 'TEST_EVENT_1', 'admin',
+	NULL, 'TEST_EVENT_1', '1',
 	'eventimage_default', '1999-01-01',
 	'TEST EVENT',
 	1
 );
 INSERT INTO events VALUES (
-	NULL, 'TEST_EVENT_2', 'admin',
+	NULL, 'TEST_EVENT_2', '1',
 	'eventimage_default', '1999-01-01',
 	'TEST EVENT',
 	1

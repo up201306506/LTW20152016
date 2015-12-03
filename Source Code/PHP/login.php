@@ -14,6 +14,7 @@ if (isset($_POST['login'])) {
 
 		if (!empty($user) && $user['password'] == $password) {
 			$_SESSION['login_user'] = $username;
+			$_SESSION['user_id'] = $user['id'];
 			header('Location: profile.php');
 		} else {
 			$error = '1Username or Password is invalid!';

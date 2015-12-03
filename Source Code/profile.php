@@ -18,6 +18,7 @@
 		}
 		include 'Database/event_type_connection.php';
 		include 'Database/event_connection.php';
+		include 'Database/user_connection.php';
 		include 'PHP/topnav.php';
 		include 'PHP/event_deletion.php';
 	?>
@@ -29,17 +30,20 @@
 		</ul>
 		<div class="tab-content current" id="tab-1">
 			<?php
-				$uservents = getEventsByUserID($_SESSION['login_user']);
+				$uservents = getEventsByUserID($_SESSION['user_id']);
 				$eventtypes = getAllEventTypes();
 				
 				if (!empty($uservents))
 				{	
 					foreach($uservents as $row)
 					{
+						$creator = getUserByID($row['user_id']);
+						if(!empty($creator))
+							echo "WELP";
 						echo '<div class="eventBox">';
 							echo '<a href="event.php?id=' . $row['id'] . '"><span>' . $row['event_id'] . '<span></a><br>';
 							echo '<span class="EventType">' . $eventtypes[$row['type']]['type'] . '<span><br>';
-							echo '<span class="EventUser"> Created by: '. $row['user_id'] . '<span><br>';
+							echo '<span class="EventUser"> Created by: '. $creator['user_id'] . '<span><br>';
 							echo '<span class="EventDate">' . $row['date'] . '<span><br>';
 							echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
 							echo '<img src="Images/Event/'.$row['image_path'].'.jpg" alt="image_'.$row['event_id'].'" class="event_image"/>';
