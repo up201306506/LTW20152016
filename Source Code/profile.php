@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Profile</title>
+	<script src="JQuery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="JQuery/profile.js"></script>
 	<link rel="stylesheet" type="text/css" href="Styles/topnav.css">
 	<link rel="stylesheet" type="text/css" href="Styles/profile.css">
 	<link href='https://fonts.googleapis.com/css?family=Jura:600' rel='stylesheet' type='text/css'>
@@ -20,29 +22,37 @@
 		include 'PHP/event_deletion.php';
 	?>
 	<input class="add_event" Onclick="location.href = 'newevent.php';" type="button" value="Add Event" name="AddEventButton">
-	<div class="eventDiv">
-		<?php
-			// $uservents = getEventsByUserID($_SESSION['login_user']);
-			// $eventtypes = getAllEventTypes();
-			
-			// if (!empty($uservents))
-			// {	
-			// 	foreach($uservents as $row)
-			// 	{
-			// 		echo '<div class="eventBox">';
-			// 			echo '<a href="event.php?id=' . $row['id'] . '"><h2>' . $row['event_id'] . '<h2></a>';
-			// 			echo '<span class="EventType">' . $eventtypes[$row['type']]['type'] . '<span><br>';
-			// 			echo '<span class="EventUser"> Created by: '. $row['user_id'] . '<span><br>';
-			// 			echo '<span class="EventDate">' . $row['date'] . '<span><br>';
-			// 			echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
-			// 			echo '<img src="Images/Event/'.$row['image_path'].'.jpg" alt="image_'.$row['event_id'].'" class="event_image"/>';
-			// 			echo '<form action="" method="post">';
-			// 				echo "<button name='Delete_button' class='deletebutton' value='" . $row['id'] . "'>Delete Event</button>";
-			// 			echo '</form>';
-			// 		echo '</div>';
-			// 	}
-			// }
-		?>
+	<div class="event-container">
+		<ul class="tabs">
+			<li class="tab-link current" data-tab="tab-1">Created Events</li>
+			<li class="tab-link" data-tab="tab-2">Attending Events</li>
+		</ul>
+		<div class="tab-content current" id="tab-1">
+			<?php
+				$uservents = getEventsByUserID($_SESSION['login_user']);
+				$eventtypes = getAllEventTypes();
+				
+				if (!empty($uservents))
+				{	
+					foreach($uservents as $row)
+					{
+						echo '<div class="eventBox">';
+							echo '<a href="event.php?id=' . $row['id'] . '"><span>' . $row['event_id'] . '<span></a><br>';
+							echo '<span class="EventType">' . $eventtypes[$row['type']]['type'] . '<span><br>';
+							echo '<span class="EventUser"> Created by: '. $row['user_id'] . '<span><br>';
+							echo '<span class="EventDate">' . $row['date'] . '<span><br>';
+							echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
+							echo '<img src="Images/Event/'.$row['image_path'].'.jpg" alt="image_'.$row['event_id'].'" class="event_image"/>';
+							echo '<form action="" method="post">';
+								echo "<button name='Delete_button' class='deletebutton' value='" . $row['id'] . "'>Delete Event</button>";
+							echo '</form>';
+						echo '</div>';
+					}
+				}
+			?>
+		</div>
+		<div class="tab-content" id="tab-2">
+		</div>
 	</div>
 </body>
 </html>

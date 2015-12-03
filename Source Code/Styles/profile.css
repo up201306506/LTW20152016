@@ -21,8 +21,10 @@ body {
 	color: white;
 	font-size: 1em;
 	display: block;
+	cursor: pointer;
 	margin: 1em auto;
 	background-color: #333;
+	transition: all linear 0.15s;
 	font-family: 'Jura', sans-serif;
 }
 
@@ -30,19 +32,45 @@ body {
 	background-color: #4c4c4c;
 }
 
-.eventDiv {
+.event-container {
 	width: 80%;
-	height: 200%;
 	margin: auto;
+	color: white;
 	display: block;
+	font-family: 'Jura', sans-serif;
+}
+
+.tabs {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.tabs li {
+	margin: 0;
+	width: 50%;
+	float: left;
+	padding: 1em 0;
+	cursor: pointer;
+	text-align: center;
+	background-color: #111;
+}
+
+.tabs .current {
 	background-color: #333;
 }
 
-.eventBox {
-	background-color: #4DAF7C;
+.tabs li:not(.current):hover {
+	background-color: #4c4c4c;
+	transition: all linear 0.15s;
 }
 
-.event_image{
-	max-width: 200px;
-	max-height: 300px;
+.tab-content {
+	padding: 1em;
+	display: none;
+	background-color: #333;
+}
+
+.tab-content.current {
+	display: inherit;
 }
