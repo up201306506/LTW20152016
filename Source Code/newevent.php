@@ -20,32 +20,31 @@
 		include 'PHP/topnav.php';
 	?>
 		<h3>Add New Event</h3>
-		
 		<form action="" method="post"> 
-			<label for="Event_Id">Nome:</label><input type="text" name="Event_Id" id="Event_Id"> <br>
-			<label for="Event_Description">Descrição:</label><textarea name="Event_Description" id="Event_Description"></textarea> <br> 
+			<label for="Event_Id">Nome:</label>
+			<input type="text" name="Event_Id" id="Event_Id"><br>
+			<label for="Event_Description">Descrição:</label>
+			<textarea name="Event_Description" id="Event_Description"></textarea><br> 
 			<label for="Event_Type">Tipo de evento:</label>
 			<select name="Event_Type" id="Event_Type">
 				<?php include 'Database/event_type_connection.php' ;
-				$type_list = getAllEventTypes();
-				foreach($type_list as $options)
-				{
-					echo "<option value='".$options['id']."'>".$options['type']."</option>";
-				}
+					$type_list = getAllEventTypes();
+					foreach($type_list as $options)
+					{
+						echo "<option value='".$options['id']."'>".$options['type']."</option>";
+					}
 				?>
 			</select><br>
-			<label for="Event_Date">Data:</label><input type="date" name="Event_Date" id="Event_Date"><br>
-			
-			<input type="submit" name="Event_Submit"> </input>
+			Data:<input class="day" type="text">/<input class="month" type="text">/<input class="year" type="text"><br>
+			<input type="submit" name="Event_Submit">
 		</form>
-		
+
 		<?php	
 			include 'Database/event_connection.php';
 			include'PHP/event_creation.php';
 		?>
 		<br>
 		<span id="message"></span>
-		
 	</div>
 </body>
 </html>

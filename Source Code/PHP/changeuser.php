@@ -11,7 +11,7 @@ if (isset($_POST['submit_username'])) {
 		$newusername = $_POST['newusername'];
 		changeUsername($Userid, $newusername);
 		$_SESSION['login_user'] = $newusername;
-		header("Location:profile.php");
+		echo '<script>window.location = "profile.php"</script>';
 	}
 }
 

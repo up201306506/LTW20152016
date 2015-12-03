@@ -38,8 +38,6 @@
 					foreach($uservents as $row)
 					{
 						$creator = getUserByID($row['user_id']);
-						if(!empty($creator))
-							echo "WELP";
 						echo '<div class="eventBox">';
 							echo '<a href="event.php?id=' . $row['id'] . '"><span>' . $row['event_id'] . '<span></a><br>';
 							echo '<span class="EventType">' . $eventtypes[$row['type']]['type'] . '<span><br>';
