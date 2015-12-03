@@ -13,7 +13,6 @@ if(isset($_SESSION['login_user'])) {
 	<meta charset="utf-8">
 	<title>Eventerer™</title>
 	<link rel="stylesheet" type="text/css" href="Styles/index.css">
-	<link href='https://fonts.googleapis.com/css?family=Jura:600' rel='stylesheet' type='text/css'>
 	<script src="JQuery/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="JQuery/accordion.js"></script>
 </head>

@@ -10,10 +10,10 @@ body {
 	background: contain;
 }
 
-#Add_event{
-	position: absolute;
-	margin-top: 1em;
+.add_event {
 	left: 50%;
+	top: 5.5em;
+	position: absolute;
 	transform: translate(-50%);
 }
 
@@ -22,7 +22,7 @@ body {
 	position: absolute;
 	width: 90%;
 	left: 50%;
-	top: 7em;
+	top: 6em;
 	transform: translate(-50%);
 }
 
