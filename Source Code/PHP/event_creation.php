@@ -3,7 +3,7 @@
 $once = true;
 
 if (isset($_POST['Event_Submit']) and $once == true) {
-	if (  /*empty($_POST['Event_image'])||*/ empty($_POST['Event_Date'])  || empty($_POST['Event_Type'])  
+	if ( empty($_POST['Event_Date'])  || empty($_POST['Event_Type'])  
 		 || empty($_POST['Event_Description'])   || empty($_POST['Event_Id'])) 
 	{
 	?>
