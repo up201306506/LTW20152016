@@ -1,14 +1,8 @@
-<?php
-
-echo '<div class="navigation">';
-	echo '<img id="topnavimg" src="Images/logo2.png">';
-	echo '<div class="Information">';
-		echo '<span> Username:</span>';
-		echo '<a class="topnavtext" href="profile.php">'. $_SESSION['login_user'] . '</a>';
-		echo '<a class="topnavtext" href="PHP/settings.php">Settings</a>';
-		echo '<a  class="topnavtext" href="PHP/logout.php">Log Out</a>';
-	echo '</div>';
-echo '</div>';
-echo '<div class="navSpacing"></div>';
-
-?>
+<ul class="main_tab">
+	<a class="home_icon" href=""><img src="Images/home_icon.png"></a>
+	<input class="search_bar" type="text" placeholder="PESQUISA">
+	<li><a href="PHP/logout.php">Log Out</a></li>
+	<li><a href="settings.php">Settings</a></li>
+	<li><a href="profile.php">User: <?php echo $_SESSION['login_user']; ?></a></li>
+</ul>
+<div class="navSpacing"></div>
