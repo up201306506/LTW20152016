@@ -29,9 +29,13 @@
 			$this_event = getEventByID($_GET['id']);
 			$eventtype = getEventsByTypeID($this_event['type']);
 			
+			$isOwner = false;
+			if ($this_event['user_id'] == $_SESSION['user_id'])
+				$isOwner = true;
+			
 			?>
 				<div class="eventBox">
-					<h1><?php echo $this_event['event_id'];?></h3>
+					<h1><?php echo $this_event['event_id'];?></h1>
 					<span class="EventCreator"> Creator: <?php echo getUserByID($this_event['user_id'])['user_name']; ?></span><br>
 					<span class="EventType"> <?php echo $eventtype['type']; ?></span><br>
 					<span class="EventDate"> Date: <?php echo $this_event['date']; ?></span><br>
@@ -39,14 +43,9 @@
 					
 					<span class="EventDescription"> Descripion: <?php echo $this_event['description']; ?></span><br>
 					
-					<form action="PHP/imageupload.php" method="post" enctype="multipart/form-data">
-						<label for="ImageUpload">Change Image:</label>
-						<input type="file" name="ImageUpload" id="ImageUpload">
-						<input type="submit" value="Upload Image" name="submit">
-					</form>
-					
-					<input class="EditEventButton" Onclick="location.href = 'editevent.php';" type="button" value="Edit Event" name="EditEventButton">
-	
+					<?php if($isOwner) {?> 				
+						<input class="EditEventButton" Onclick="location.href = 'editevent.php?id=<?php echo $this_event['id']; ?>';" type="button" value="Edit Event" name="EditEventButton">
+					<?php } ?>
 							
 				</div>
 			<?php
