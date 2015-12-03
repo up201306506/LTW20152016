@@ -36,13 +36,13 @@ INSERT INTO user VALUES (
 );
 INSERT INTO events VALUES (
 	NULL, 'TEST_EVENT_1', 'admin',
-	'eventimage_default', '1999-01-01 00:00:01',
+	'eventimage_default', '1999-01-01',
 	'TEST EVENT',
 	1
 );
 INSERT INTO events VALUES (
 	NULL, 'TEST_EVENT_2', 'admin',
-	'eventimage_default', '1999-01-01 00:00:01',
+	'eventimage_default', '1999-01-01',
 	'TEST EVENT',
 	1
 );

@@ -6,6 +6,10 @@ html, body {
 }
 
 body {
-	background-image: url("../Images/background.png");
+	background-image: url("../Images/background.jpg");
 	background: contain;
+}
+.EventImg{
+	max-width: 200px;
+	max-height: 300px;
 }

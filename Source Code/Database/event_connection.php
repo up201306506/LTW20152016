@@ -21,6 +21,13 @@ function existsEventByID($ID) {
 	$result = $stmt->fetchAll();
 	return (!empty($result));
 }
+function getEventByID($ID) {
+	$db_events = new PDO('sqlite:Database/eventerer.db');
+	$stmt = $db_events->prepare('SELECT * FROM events WHERE id = ?');
+	$stmt->execute(array($ID));
+	$result = $stmt->fetch();
+	return $result;
+}
 function insertIntoEvents($event_id, $user_id, $event_type, $event_description, $event_date, $image_path) {
 	$db_events = new PDO('sqlite:Database/eventerer.db');
 	$stmt = $db_events->prepare('INSERT INTO events VALUES (NULL, :eventid, :user, :imagepath, :date, :description, :type)');
