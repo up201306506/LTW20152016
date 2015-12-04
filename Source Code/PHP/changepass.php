@@ -4,7 +4,7 @@
 $error = '';
 
 if (isset($_POST['submit_password'])) {
-	if (empty($_POST['newpassword']) || empty($_POST['password'])) {
+	if (empty($_POST['newpassword']) || empty($_POST['password2']) || (getUserByID($_SESSION['user_id'])['password'] != $_POST['password2'])) {
 		$error = 'Password or New Password is invalid!';
 	} else {
 		$Userid = $_SESSION['user_id'];
