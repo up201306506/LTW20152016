@@ -54,7 +54,7 @@
 							<?php } ?>
 						</form>
 						<br>
-					<span class="EventCreator"> Creator: <?php echo "<a class='CreatorLink' href='profile.php?id='".$this_event['user_id']."' >".getUserByID($this_event['user_id'])['user_name']."</a>"; ?></span><br>
+					<span class="EventCreator"> Creator: <?php echo "<a href='profile.php?id=".$this_event["user_id"]."'>".getUserByID($this_event['user_id'])['user_name']."</a>"; ?></span><br>
 					<span class="EventType"> <?php echo $eventtype['type']; ?></span><br>
 					<span class="EventDate"> Date: <?php echo $this_event['date']; ?></span><br>
 					<img class="EventImg" src="Images/Event/<?php echo $this_event['image_path']; ?>.jpg"/><br>
