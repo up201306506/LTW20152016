@@ -1,6 +1,6 @@
 <?php
 
-function createdEventBox() {
+function createdEventBox($owner) {
 	$userevents = getEventsByUserID($_SESSION['user_id']);
 	$eventtypes = getAllEventTypes();
 				
@@ -21,9 +21,12 @@ function createdEventBox() {
 				<span class="event_user">Created by: <?php echo $creator['user_name']; ?></span>
 				<span class="event_date"><?php echo $row['date']; ?></span>
 				<img class="event_img" src=<?php echo $imgPath; ?> alt=<?php echo $alt; ?>>
-				<form action="" method="post">
-					<button name="Delete_button" class="delete_button" value=<?php echo $value; ?>>Cancel Event</button>
-				</form>
+				<?php if($owner)
+				{ ?>
+					<form action="" method="post">
+						<button name="Delete_button" class="delete_button" value=<?php echo $value; ?>>Cancel Event</button>
+					</form>
+				<?php } ?>
 			</div>
 
 			<?php
