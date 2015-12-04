@@ -43,7 +43,6 @@
 							echo '<span class="EventType">' . $eventtypes[$row['type']]['type'] . '<span><br>';
 							echo '<span class="EventUser"> Created by: '. $creator['user_name'] . '<span><br>';
 							echo '<span class="EventDate">' . $row['date'] . '<span><br>';
-							echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
 							echo '<img src="Images/Event/'.$row['image_path'].'.jpg" alt="image_'.$row['event_id'].'" class="event_image"/>';
 							echo '<form action="" method="post">';
 								echo "<button name='Delete_button' class='deletebutton' value='" . $row['id'] . "'>Delete Event</button>";
@@ -66,7 +65,6 @@
 							echo '<span class="EventType">' . $eventtypes[$row['type']]['type'] . '<span><br>';
 							echo '<span class="EventUser"> Created by: '. $creator['user_name'] . '<span><br>';
 							echo '<span class="EventDate">' . $row['date'] . '<span><br>';
-							echo '<span class="EventDescription">' . $row['description'] . '<span><br>';
 							echo '<img src="Images/Event/'.$row['image_path'].'.jpg" alt="image_'.$row['event_id'].'" class="event_image"/>';
 							echo '<form action="" method="post">';
 								echo "<button name='Delete_button' class='deletebutton' value='" . $row['id'] . "'>Delete Event</button>";

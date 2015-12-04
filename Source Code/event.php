@@ -29,15 +29,24 @@
 			$this_event = getEventByID($_GET['id']);
 			$eventtype = getEventsByTypeID($this_event['type']);
 			
+			$isOwner = false;
+			if ($this_event['user_id'] == $_SESSION['user_id'])
+				$isOwner = true;
+			
 			?>
 				<div class="eventBox">
-					<h1><?php echo $this_event['event_id'];?></h3>
+					<h1><?php echo $this_event['event_id'];?></h1>
 					<span class="EventCreator"> Creator: <?php echo getUserByID($this_event['user_id'])['user_name']; ?></span><br>
 					<span class="EventType"> <?php echo $eventtype['type']; ?></span><br>
 					<span class="EventDate"> Date: <?php echo $this_event['date']; ?></span><br>
 					<img class="EventImg" src="Images/Event/<?php echo $this_event['image_path']; ?>.jpg"/><br>
+					
 					<span class="EventDescription"> Descripion: <?php echo $this_event['description']; ?></span><br>
 					
+					<?php if($isOwner) {?> 				
+						<input class="EditEventButton" Onclick="location.href = 'editevent.php?id=<?php echo $this_event['id']; ?>';" type="button" value="Edit Event" name="EditEventButton">
+					<?php } ?>
+							
 				</div>
 			<?php
 		}
@@ -45,6 +54,8 @@
 		{
 			?>
 				<h3>No event exists on this page.</h3>
+				<p>But you may create an event if you wish to do so - <input class="add_event" Onclick="location.href = 'newevent.php';" type="button" value="Add Event" name="AddEventButton">
+	</p>
 			
 		
 			<?php
