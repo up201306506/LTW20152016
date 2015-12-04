@@ -30,7 +30,13 @@ function getAllComments() {
 	$result = $stmt->fetchAll();
 	return $result;
 }
-function checkIfCommentExists($ID){
+function checkIfCommentExists($commentID){
+	$db_comments = new PDO('sqlite:Database/eventerer.db');
+	$stmt = $db_comments->prepare('SELECT * FROM comments WHERE id = :ID');
+	$stmt->bindParam(':ID', $commentID);
+	$stmt->execute();
+	$result = $stmt->fetch();
+	return (!empty($result));
 }
 
 

@@ -89,6 +89,17 @@
 								<div class="usercomment_box">
 								<span class="usercomment_name"><?php echo '   '.getUserByID($rows['u_id'])['user_name'] . ': '; ?></span>
 								<span class="usercomment_text"><?php echo '   '.$rows['message']; ?></span>
+								<?php 
+									if($rows['u_id'] == $_SESSION['user_id'])
+									{
+										?>
+										<form action="" method="post">
+											<input type="hidden" name="Comment_ID" value="<?php echo $rows['id']; ?>"/>
+											<input name="DeleteComment" type="submit" value="Delete this comment">
+										</form>
+										<?php 
+									}
+								?>
 								</div>
 							<?php
 							
