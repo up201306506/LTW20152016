@@ -17,6 +17,7 @@
 		include 'Database/event_type_connection.php';
 		include 'Database/user_connection.php';
 		include 'Database/event_connection.php';
+		include 'PHP/joinleaveEvent.php';
 		include 'PHP/topnav.php';
 		
 	?>
@@ -39,12 +40,16 @@
 					<?php if(checkIfUserAttends($this_event['id'] , $_SESSION['user_id'])) {?>
 						<span class="YoureAttending">You're going!</span>
 						<form action="" method="post">
+							<input type="hidden" name="Event_ID" value="<?php echo $this_event['id']; ?>"/>
+							<input type="hidden" name="User_ID" value="<?php echo  $_SESSION['user_id']; ?>"/>
 							<input name="LeaveEvent" type="submit" value="Leave Event">
 						</form>
 						<br>
 					<?php } else { ?>
 						<span class="YoureNtAttending">You're not going!</span>
 						<form action="" method="post">
+							<input type="hidden" name="Event_ID" value="<?php echo $this_event['id']; ?>"/>
+							<input type="hidden" name="User_ID" value="<?php echo  $_SESSION['user_id']; ?>"/>
 							<input name="JoinEvent" type="submit" value="Join Event">
 						</form>
 						<br>
