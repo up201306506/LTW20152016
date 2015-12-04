@@ -17,6 +17,7 @@
 		include 'Database/event_type_connection.php';
 		include 'Database/user_connection.php';
 		include 'Database/event_connection.php';
+		include 'Database/comment_connection.php';
 		include 'PHP/joinleaveEvent.php';
 		include 'PHP/topnav.php';
 		
@@ -73,8 +74,21 @@
 					
 					<?php if($isOwner) {?> 				
 						<input class="EditEventButton" Onclick="location.href = 'editevent.php?id=<?php echo $this_event['id']; ?>';" type="button" value="Edit Event" name="EditEventButton">
-					<?php } ?>
-							
+					<?php } ?>			
+				</div>
+				<div class="commentBox">
+					<?php 
+						$comments = getAllCommentsForEvent($this_event['id']);
+						foreach($comments as $rows)
+						{
+							?>
+								<div class="usercomment_box">
+								<span class="usercomment_name"><?php echo $row['u_id']; ?></span>
+								<span class="usercomment_text"><?php echo $row['contetn']; ?></span>
+								</div>
+							<?php
+						}
+					?>
 				</div>
 			<?php
 		}
@@ -82,8 +96,7 @@
 		{
 			?>
 				<h3>No event exists on this page.</h3>
-				<p>But you may create an event if you wish to do so - <input class="add_event" Onclick="location.href = 'newevent.php';" type="button" value="Add Event" name="AddEventButton">
-	</p>
+				<span id='message'>But you may create an event if you wish to do so - <input class="add_event" Onclick="location.href = 'newevent.php';" type="button" value="Add Event" name="AddEventButton"></span>
 			
 		
 			<?php

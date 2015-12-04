@@ -26,6 +26,14 @@ CREATE TABLE user_attends_event (
 	FOREIGN KEY (u_id) REFERENCES user(id) ON DELETE CASCADE,
 	FOREIGN KEY (e_id) REFERENCES events(id) ON DELETE CASCADE
 );
+CREATE TABLE comments (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	u_id INTEGER,
+	e_id INTEGER,
+	content TEXT,
+	FOREIGN KEY (u_id) REFERENCES user(id) ON DELETE CASCADE,
+	FOREIGN KEY (e_id) REFERENCES events(id) ON DELETE CASCADE
+);
 
 
 INSERT INTO user VALUES (
@@ -37,18 +45,18 @@ INSERT INTO user VALUES (
 INSERT INTO user VALUES (
 	NULL,
 	0,
-	'OQUELHAS',
-	'obelhas'
+	'username',
+	'password'
 );
 INSERT INTO events VALUES (
 	NULL, 'TEST_EVENT_1', '1',
-	'eventimage_default', '1999-01-01',
+	'eventimage_default', '1999-January-01',
 	'TEST EVENT',
 	1
 );
 INSERT INTO events VALUES (
 	NULL, 'TEST_EVENT_2', '1',
-	'eventimage_default', '1999-01-01',
+	'eventimage_default', '1999-January-01',
 	'TEST EVENT',
 	1
 );
