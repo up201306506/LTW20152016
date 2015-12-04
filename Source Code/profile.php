@@ -54,13 +54,13 @@
 			?>
 		</div>
 		<div class="tab-content" id="tab-2">
-		<?php	
-			$userattendance = getEventsUserAttends($_SESSION['user_id']);
-			if (!empty($userattendance))
-			{
-				foreach($userattendance as $row)
+			<?php	
+				$userattendance = getEventsUserAttends($_SESSION['user_id']);
+				if (!empty($userattendance))
 				{
-					$creator = getUserByID($row['user_id']);
+					foreach($userattendance as $row)
+					{
+						$creator = getUserByID($row['user_id']);
 						echo '<div class="eventBox">';
 							echo '<a href="event.php?id=' . $row['id'] . '"><span>' . $row['event_id'] . '<span></a><br>';
 							echo '<span class="EventType">' . $eventtypes[$row['type']]['type'] . '<span><br>';
@@ -72,9 +72,9 @@
 								echo "<button name='Delete_button' class='deletebutton' value='" . $row['id'] . "'>Delete Event</button>";
 							echo '</form>';
 						echo '</div>';
-				}	
-			}
-		?>
+					}	
+				}
+			?>
 		</div>
 	</div>
 </body>

@@ -18,39 +18,33 @@
 		}
 
 		include 'PHP/topnav.php';
-		include 'PHP/date.php';
+		include 'PHP/dateAndType.php';
 	?>
-		<h3>Add New Event</h3>
-		<form action="" method="post"> 
-			<label for="Event_Id">Nome:</label>
-			<input type="text" name="Event_Id" id="Event_Id"><br>
-			<label for="Event_Description">Descrição:</label>
-			<textarea name="Event_Description" id="Event_Description"></textarea><br> 
-			<label for="Event_Type">Tipo de evento:</label>
-			<select name="Event_Type" id="Event_Type">
-				<?php include 'Database/event_type_connection.php' ;
-					$type_list = getAllEventTypes();
-					foreach($type_list as $options)
-					{
-						echo "<option value='".$options['id']."'>".$options['type']."</option>";
-					}
-				?>
-			</select><br>
-			<label for="date">Date:</label>
-			<div id="date">
-				<select name="day" class="day"><?php dayOptions(); ?></select>
-				<select name="month" class="month"><?php monthOptions(); ?></select>
-				<select name="year" class="year"><?php yearOptions(); ?></select>
+	<form action="" method="post">
+		<div class="form">
+			<span class="title">New Event</span>
+			<span>Name:</span>
+			<input type="text" name="id" class="id">
+			<span>Description:</span>
+			<textarea style="resize:none" name="description" class="description"></textarea>
+			<span>Type of event:</span>
+			<select name="type" class="type"><?php typeOptions(); ?></select>
+			<span>Date:</span>
+			<div class="container">
+				<div class="date">
+					<select name="day" class="day"><?php dayOptions(); ?></select>
+					<select name="month" class="month"><?php monthOptions(); ?></select>
+					<select name="year" class="year"><?php yearOptions(); ?></select>
+				</div>
 			</div>
-			<input type="submit" name="Event_Submit">
-		</form>
-
-		<?php
-			include 'Database/event_connection.php';
-			include'PHP/event_creation.php';
-		?>
-		<br>
-		<span id="message"></span>
-	</div>
+		</div>
+		<input type="submit" value="Submit" name="Event_Submit" class="event_submit">
+	</form>
+	<?php
+		include 'Database/event_connection.php';
+		include'PHP/event_creation.php';
+	?>
+	<br>
+	<span id="message"></span>
 </body>
 </html>

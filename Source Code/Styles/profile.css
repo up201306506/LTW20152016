@@ -33,7 +33,7 @@ body {
 }
 
 .event-container {
-	width: 80%;
+	width: 600px;
 	margin: auto;
 	color: white;
 	display: block;
@@ -51,24 +51,25 @@ body {
 	width: 50%;
 	float: left;
 	padding: 1em 0;
-	cursor: pointer;
 	text-align: center;
 	background-color: #111;
 }
 
 .tabs .current {
 	background-color: #333;
+	border-bottom: 0.07em solid #FFF;
 }
 
 .tabs li:not(.current):hover {
+	cursor: pointer;
 	background-color: #4c4c4c;
 	transition: all linear 0.15s;
 }
 
 .tab-content {
-	padding: 1em;
 	display: none;
 	background-color: #333;
+	padding: 4em 1em 1em 1em;
 }
 
 .tab-content.current {

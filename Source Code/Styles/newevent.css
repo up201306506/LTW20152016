@@ -12,6 +12,101 @@ body {
 	background-size: cover;
 }
 
-h3, form {
+form {
+	width: 600px;
+	margin: 3.7% auto 0 auto;
+	display: block;
+}
+
+.form {
+	width: 100%;
+	margin: auto;
+	display: block;
+	background-color: #333;
 	font-family: 'Jura', sans-serif;
 }
+
+.title {
+	padding: 1em;
+	margin: auto;
+	display: block;
+	text-align: center;
+	border-bottom: 0.07em solid #FFF; 
+}
+
+span {
+	color: white;
+	padding: 1em;
+	margin: auto;
+	display: block;
+	text-align: center;
+	border: 0.05em solid #FFF;
+}
+
+.id {
+	outline: 0;
+	width: 250px;
+	margin: auto;
+	display: block;
+	text-align: center;
+}
+
+.description {
+	outline: 0;
+	margin: auto;
+	width: 500px;
+	height: 200px;
+	display: block;
+}
+
+.type {
+	outline: 0;
+	margin: auto;
+	display: block;
+}
+
+.container {
+	display: block;
+	padding-bottom: 1em;
+}
+
+.date {
+	width: 33.6%;
+	margin: auto;
+	display: block;
+}
+
+.event_submit {
+	outline: 0;
+	padding: 1em;
+	border: none;
+	color: white;
+	font-size: 1em;
+	display: block;
+	cursor: pointer;
+	margin: 1em auto 0 auto;
+	background-color: #333;
+	transition: all linear 0.15s;
+	font-family: 'Jura', sans-serif;
+}
+
+.event_submit:hover {
+	background-color: #4c4c4c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
