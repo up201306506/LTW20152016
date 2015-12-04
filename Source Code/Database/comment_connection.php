@@ -18,12 +18,18 @@ function deleteComment($commentID){
 }
 function getAllCommentsForEvent($eventID) {
 	$db_comments = new PDO('sqlite:Database/eventerer.db');
-	$stmt = $db_comments->prepare('SELECT * FROM comments WHERE e_id = :eventID');
-	$stmt->bindParam(':eventID', $eventID);
+	$stmt = $db_comments->prepare('SELECT * FROM comments WHERE e_id = ?');
+	$stmt->execute(array( $eventID));
 	$result = $stmt->fetchAll();
 	return $result;
 }
-
+function getAllComments() {
+	$db_comments = new PDO('sqlite:Database/eventerer.db');
+	$stmt = $db_comments->prepare('SELECT * FROM comments');
+	$stmt->execute();
+	$result = $stmt->fetchAll();
+	return $result;
+}
 
 
 

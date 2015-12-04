@@ -30,7 +30,7 @@ CREATE TABLE comments (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	u_id INTEGER,
 	e_id INTEGER,
-	content TEXT,
+	message TEXT,
 	FOREIGN KEY (u_id) REFERENCES user(id) ON DELETE CASCADE,
 	FOREIGN KEY (e_id) REFERENCES events(id) ON DELETE CASCADE
 );
@@ -94,4 +94,25 @@ INSERT INTO user_attends_event VALUES (
 	NULL,
 	2,
 	1
+);
+INSERT INTO comments VALUES (
+	NULL,
+	1,
+	1,
+	'E para partilhar a conta'
+
+);
+INSERT INTO comments VALUES (
+	NULL,
+	2,
+	1,
+	'Entao vou pedir a dobrar'
+
+);
+INSERT INTO comments VALUES (
+	NULL,
+	1,
+	1,
+	'Diz isso outra vez e bano-te do site'
+
 );

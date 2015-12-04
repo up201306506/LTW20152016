@@ -123,4 +123,7 @@ function updateEventDetails($eventID, $name, $type, $date, $description){
 	$stmt->execute();	
 }
 
+
+
+
 ?>

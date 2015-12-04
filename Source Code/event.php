@@ -75,18 +75,22 @@
 					<?php if($isOwner) {?> 				
 						<input class="EditEventButton" Onclick="location.href = 'editevent.php?id=<?php echo $this_event['id']; ?>';" type="button" value="Edit Event" name="EditEventButton">
 					<?php } ?>			
-				</div>
+				</div> 
+				<br>
 				<div class="commentBox">
+				<span id="commentBoxHeader">Comments:</span> <br>
 					<?php 
-						$comments = getAllCommentsForEvent($this_event['id']);
-						foreach($comments as $rows)
+						$comments = getAllCommentsForEvent($this_event['id']);						
+						foreach ($comments as $rows)
 						{
+							
 							?>
 								<div class="usercomment_box">
-								<span class="usercomment_name"><?php echo $row['u_id']; ?></span>
-								<span class="usercomment_text"><?php echo $row['contetn']; ?></span>
+								<span class="usercomment_name"><?php echo '   '.getUserByID($rows['u_id'])['user_name'] . ': '; ?></span>
+								<span class="usercomment_text"><?php echo '   '.$rows['message']; ?></span>
 								</div>
 							<?php
+							
 						}
 					?>
 				</div>
