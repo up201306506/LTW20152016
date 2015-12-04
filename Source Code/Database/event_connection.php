@@ -62,5 +62,20 @@ function updateImageEvent($eventID, $value) {
 	$stmt->bindParam(':value', $value);
 	$stmt->execute();
 }
+function updateEventDetails($eventID, $name, $type, $date, $description){
+	$db_events = new PDO('sqlite:../Database/eventerer.db');
+	$stmt = $db_events->prepare('UPDATE events SET 
+								event_id = :name,
+								date = :date,
+								type = :type,
+								description = :description
+								WHERE id = :eventID');
+	$stmt->bindParam(':eventID', $eventID);
+	$stmt->bindParam(':name', $name);
+	$stmt->bindParam(':date', $date);
+	$stmt->bindParam(':type', $type);
+	$stmt->bindParam(':description', $description);
+	$stmt->execute();	
+}
 
 ?>

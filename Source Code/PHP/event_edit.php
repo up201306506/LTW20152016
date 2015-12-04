@@ -1,12 +1,22 @@
 <?php
 
 if (isset($_POST['SubmitEvent'])) {
+	include '../Database/event_connection.php';
 	$event_to_edit = $_POST['Event_ID_Value'];
+	$event_date = '' . $_POST['year'] . '-' . $_POST['month'] . '-' . $_POST['day'];
 	
-	echo "SubmitEvent<br>";
-	echo $event_to_edit;
+	updateEventDetails($event_to_edit, $_POST['Event_Name'], $_POST['Event_Type'], 
+										$event_date, $_POST['Event_Description']);
+	
+	echo "The Event has been updated.";
+	
+	echo '<br><br><a href="../event.php?id='.$event_to_edit.'">Go Back...</>';
+	
 	
 }
+
+
+
 else if(isset($_POST['SubmitImage']) && !empty($_FILES["ImageUpload"]["name"]))
 {
 	include '../Database/event_connection.php';
