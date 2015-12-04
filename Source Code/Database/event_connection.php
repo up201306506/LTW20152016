@@ -53,4 +53,13 @@ function deleteEvent($event_primary_id){
 	$stmt->execute(array($event_primary_id));
 }
 
+/*Must be accessed from withint the PHP folder*/
+function updateImageEvent($eventID, $value) {
+	$db_events = new PDO('sqlite:../Database/eventerer.db');
+	$stmt = $db_events->prepare('UPDATE events SET image_path = :value WHERE id = :eventID');
+	$stmt->bindParam(':eventID', $eventID);
+	$stmt->bindParam(':value', $value);
+	$stmt->execute();
+}
+
 ?>
