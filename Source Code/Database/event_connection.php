@@ -55,6 +55,14 @@ function getEventsUserAttends($User_ID) {
 	$result = $stmt->fetchAll();
 	return $result;
 }
+function getAttendingUsers($eventID){
+	$db_events = new PDO('sqlite:Database/eventerer.db');
+	$stmt = $db_events->prepare('SELECT * FROM user_attends_event WHERE e_id = :event');
+	$stmt->bindParam(':event', $eventID);
+	$stmt->execute();
+	$result = $stmt->fetchAll();
+	return $result;
+}
 function insertAttend($eventID, $userID){
 	$db_events = new PDO('sqlite:Database/eventerer.db');
 	$stmt = $db_events->prepare('INSERT INTO user_attends_event VALUES (NULL, :user, :event)');
@@ -80,6 +88,15 @@ function leaveEvent($eventID, $userID){
 	$stmt->bindParam(':event', $eventID);
 	$stmt->execute();
 }
+function countAttendingUsers($eventID){
+	$db_events = new PDO('sqlite:Database/eventerer.db');
+	$stmt = $db_events->prepare('SELECT COUNT(*) AS count FROM user_attends_event WHERE e_id = :event');
+	$stmt->bindParam(':event', $eventID);
+	$stmt->execute();
+	$result = $stmt->fetch();
+	return $result['count'];
+}
+
 
 
 /*Must be accessed from withint the PHP folder*/

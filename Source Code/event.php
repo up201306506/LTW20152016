@@ -59,6 +59,18 @@
 					
 					<span class="EventDescription"> Descripion: <?php echo $this_event['description']; ?></span><br>
 					
+					<span class="EventShowUpsLabel"> People Going(<?php echo countAttendingUsers($this_event['id']); ?>):</span>
+					<span class="EventShowUps">
+					<?php
+						$attendingusersarray = getAttendingUsers($this_event['id']);
+						foreach($attendingusersarray as $row)
+						{
+							$current_username = getUserByID($row['u_id'])['user_name'];
+							echo $current_username.'  ';
+						}	
+						
+					?></span><br>
+					
 					<?php if($isOwner) {?> 				
 						<input class="EditEventButton" Onclick="location.href = 'editevent.php?id=<?php echo $this_event['id']; ?>';" type="button" value="Edit Event" name="EditEventButton">
 					<?php } ?>
