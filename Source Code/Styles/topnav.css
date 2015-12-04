@@ -36,21 +36,39 @@ li {
 	padding-top: 1em;
 }
 
-.lupa {
-	width: 2em;
-	height: 2em;
-	padding: 0.5em;
-	float: right;
+li:last-child {
+	padding: 0;
+}
+
+.search_form {
+	height: 3em;
 	display: block;
 }
 
 .search_bar {
+	outline: 0;
+	float: right;
+	display: block;
+	margin-top: 1.4em;
+	text-align: center;
+}
+
+.lupa {
 	border: 0;
 	outline: 0;
-	float: left;
+	padding: 0;
+	width: 4.3em;
+	height: 4.4em;
+	float: right;
 	display: block;
-	margin-right: 1em;
-	text-align: center;
+	cursor: pointer;
+	background: transparent;
+	transition: all linear 0.15s;
+	background-image: url('../Images/lupa.png');
+}
+
+.lupa:hover {
+	background-image: #4c4c4c;
 }
 
 li a {

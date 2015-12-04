@@ -91,7 +91,7 @@ body {
 }
 
 .event_box form {
-	padding: 1em 0;
+	padding-bottom: 1em;
 }
 
 .event_id {
@@ -126,11 +126,12 @@ body {
 	padding: 0 1em 1em 1em;
 }
 
-.event_img{
+.event_img {
 	margin: auto;
 	display: block;
 	max-width: 300px;
 	max-height: 200px;
+	padding-bottom: 1em;
 }
 
 .delete_button {
