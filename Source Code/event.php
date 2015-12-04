@@ -19,6 +19,7 @@
 		include 'Database/event_connection.php';
 		include 'Database/comment_connection.php';
 		include 'PHP/joinleaveEvent.php';
+		include 'PHP/addremoveComment.php';
 		include 'PHP/topnav.php';
 		
 	?>
@@ -93,6 +94,12 @@
 							
 						}
 					?>
+				<form action="" method="post">
+					<input type="hidden" name="Event_ID" value="<?php echo $this_event['id']; ?>"/>
+					<input type="hidden" name="User_ID" value="<?php echo  $_SESSION['user_id']; ?>"/>
+					<textarea style="resize:none" name="NewCommentText" class="NewCommentText"></textarea>
+					<input name="NewComment" type="submit" value="New Comment">
+				</form>
 				</div>
 			<?php
 		}

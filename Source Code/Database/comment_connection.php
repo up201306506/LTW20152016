@@ -30,7 +30,8 @@ function getAllComments() {
 	$result = $stmt->fetchAll();
 	return $result;
 }
-
+function checkIfCommentExists($ID){
+}
 
 
 ?>
