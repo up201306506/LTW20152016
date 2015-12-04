@@ -37,7 +37,7 @@
 				{	
 					foreach($allevents as $row)
 					{
-						if(strpos(strtolower($row[event_id]),strtolower($search)) !== false)
+						if(strpos(strtolower($row['event_id']),strtolower($search)) !== false)
 						{
 
 							$creator = getUserByID($row['user_id']);
@@ -62,7 +62,7 @@
 				{
 					foreach($allusers as $row)
 					{
-						if(strpos(strtolower($row[user_name]),strtolower($search)) !== false)
+						if(strpos(strtolower($row['user_name']),strtolower($search)) !== false)
 						{
 							echo '<div class="searchBox">';
 								echo '<span> Username: '. $row['user_name'] . '<span><br>';
