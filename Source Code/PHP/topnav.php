@@ -1,12 +1,12 @@
 <ul class="nav">
 	<li class="home-icon">
-		<a href="#"><img src="Images/home_icon.png"></a>
+		<a href="profile.php"><img src="Images/home_icon.png"></a>
 	</li>
 	<li class="user-options">
-		<a href="#">User: <?php echo $_SESSION['login_user']; ?></a>
+		<a href="profile.php">User: <?php echo $_SESSION['login_user']; ?></a>
 		<ul class="subnav">
-			<li><a href="#">Settings</a></li>
-			<li><a href="#">Log Out</a></li>
+			<li><a href="settings.php">Settings</a></li>
+			<li><a href="PHP/logout.php">Log Out</a></li>
 		</ul>
 	</li>
 	<li class="search-bar">
@@ -16,3 +16,4 @@
 		</form>
 	</li>
 </ul>
+<div class="spacing"></div>

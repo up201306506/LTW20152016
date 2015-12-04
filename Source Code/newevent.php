@@ -20,7 +20,7 @@
 		include 'PHP/topnav.php';
 		include 'PHP/dateAndType.php';
 	?>
-	<form action="" method="post">
+	<form class="form-container" action="" method="post">
 		<div class="form">
 			<span class="title">New Event</span>
 			<span>Name:</span>
