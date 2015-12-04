@@ -27,16 +27,17 @@
 				header('Location: index.php');
 			
 			
-		include 'Database/event_type_connection.php';
 		include 'Database/user_connection.php';
-		include 'PHP/date.php';	
+		include 'PHP/dateAndType.php';	
 		include 'PHP/topnav.php';
 		
 		$eventtype = getEventsByTypeID($this_event['type']);
 		
 		?>		
 		<div id="EditBox">
-			<form action="PHP/eventedit.php" method="post" enctype="multipart/form-data">
+			<form action="PHP/event_edit.php" method="post" enctype="multipart/form-data">
+				
+				<input type="hidden" name="Event_ID_Value" value="<?php echo $this_event['id']; ?>"/>
 				
 				<label for="Event_Name">Change Name:</label>
 					<input type="text" name="Event_Name" id="Event_Name"><br>
@@ -64,8 +65,7 @@
 					
 				<label for="ImageUpload">Change Image:</label>
 					<input type="file" name="ImageUpload" id="ImageUpload"><br>
-				<input type="submit" value="Change Image" name="SubmitImage"><br>
-					
+				<input type="submit" value="Change Image" name="SubmitImage"><br>	
 			</form>
 		</div>
 		
