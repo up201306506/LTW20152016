@@ -16,13 +16,18 @@
 		{
 			header('Location: index.php');
 		}
+		$search = $_GET['search_bar'];
+		if(empty($search))
+		{
+			header('Location: profile.php');
+		}
 		include 'PHP/topnav.php';
 		include 'Database/user_connection.php';
 		include 'Database/event_connection.php';
 		include 'Database/event_type_connection.php';
 		include 'PHP/changeuser.php';
 		include 'PHP/changepass.php';
-		$search = $_GET['search_bar'];
+		
 	?>
 	<div class="search-container">
 		<ul class="tabs">
