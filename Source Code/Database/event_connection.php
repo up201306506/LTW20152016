@@ -49,6 +49,7 @@ function insertIntoEvents($event_id, $user_id, $event_type, $event_description, 
 }
 function deleteEvent($event_primary_id){
 	$db_events = new PDO('sqlite:Database/eventerer.db');
+	$stmt = $db_events->prepare('PRAGMA foreign_keys = ON;');
 	$stmt = $db_events->prepare('DELETE FROM events WHERE id = ?');
 	$stmt->execute(array($event_primary_id));
 }
