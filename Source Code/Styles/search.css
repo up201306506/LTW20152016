@@ -12,8 +12,9 @@ body {
 	background-size: cover;
 }
 
-.event-container {
-	width: 600px;
+.search-container {
+	width: 1000px;
+	padding-top: 5em;
 	margin: auto;
 	color: white;
 	display: block;
