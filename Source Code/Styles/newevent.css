@@ -14,7 +14,7 @@ body {
 
 form {
 	width: 600px;
-	margin: 3.7% auto 0 auto;
+	margin: 1em auto;
 	display: block;
 }
 
@@ -71,7 +71,7 @@ span {
 }
 
 .date {
-	width: 33.6%;
+	width: 35%;
 	margin: auto;
 	display: block;
 }
@@ -93,20 +93,3 @@ span {
 .event_submit:hover {
 	background-color: #4c4c4c;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
