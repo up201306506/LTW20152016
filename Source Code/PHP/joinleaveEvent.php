@@ -2,8 +2,7 @@
 
 if (isset($_POST['LeaveEvent'])) {
 	if(checkIfUserAttends($_POST['Event_ID'] , $_POST['User_ID']))
-		echo "Fuck you";
-	
+		leaveEvent($_POST['Event_ID'], $_POST['User_ID']);	
 }
 if (isset($_POST['JoinEvent'])) {
 	if(!checkIfUserAttends($_POST['Event_ID'] , $_POST['User_ID']))

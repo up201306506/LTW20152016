@@ -72,6 +72,14 @@ function checkIfUserAttends($eventID, $userID){
 	$result = $stmt->fetchAll();
 	return (!empty($result));
 }
+function leaveEvent($eventID, $userID){
+	$db_events = new PDO('sqlite:Database/eventerer.db');
+	$stmt = $db_events->prepare('PRAGMA foreign_keys = ON;');
+	$stmt = $db_events->prepare('DELETE FROM user_attends_event WHERE u_id = :user AND e_id = :event');
+	$stmt->bindParam(':user', $userID);
+	$stmt->bindParam(':event', $eventID);
+	$stmt->execute();
+}
 
 
 /*Must be accessed from withint the PHP folder*/
