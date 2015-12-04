@@ -6,10 +6,11 @@ html, body {
 }
 
 body {
-	background-image: url("../Images/background.jpg");
+	background-color: #e9eaed;
+	/*background-image: url("../Images/background.jpg");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover;*/
 }
 
 .add_event {
@@ -33,7 +34,7 @@ body {
 }
 
 .event-container {
-	width: 600px;
+	width: 700px;
 	margin: auto;
 	color: white;
 	display: block;
@@ -76,7 +77,48 @@ body {
 	display: inherit;
 }
 
-.event_image{
+.event_box {
+	width: 80%;
+	margin: auto;
+	display: block;
+	padding-bottom: 1em;
+}
+
+.event_type {
+	display: block;
+}
+
+.event_user {
+	display: block;
+}
+
+.event_date {
+	display: block;
+}
+
+.delete_button {
+	display: block;
+}
+
+.event_img{
+	display: block;
 	max-width: 300px;
 	max-height: 200px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

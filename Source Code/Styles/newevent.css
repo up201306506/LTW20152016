@@ -6,10 +6,11 @@ html, body {
 }
 
 body {
-	background-image: url("../Images/background.jpg");
+	background-color: #e9eaed;
+	/*background-image: url("../Images/background.jpg");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover;*/
 }
 
 form {
@@ -74,6 +75,10 @@ span {
 	width: 35%;
 	margin: auto;
 	display: block;
+}
+
+.day, .month, .year {
+	outline: 0;
 }
 
 .event_submit {

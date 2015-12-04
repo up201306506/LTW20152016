@@ -6,8 +6,9 @@ html, body {
 }
 
 body {
-	background-image: url("../Images/background.jpg");
+	background-color: #e9eaed;
+	/*background-image: url("../Images/background.jpg");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover;*/
 }
