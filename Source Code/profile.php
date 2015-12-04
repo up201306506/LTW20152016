@@ -21,6 +21,7 @@
 		}	
 		
 		$owner = false;
+		$userID = $_GET['id'];
 		if($_GET['id'] == $_SESSION['user_id']){
 			$owner = true;
 		}
@@ -41,8 +42,8 @@
 			<li class="tab-link current" data-tab="tab-1">Created Events</li>
 			<li class="tab-link" data-tab="tab-2">Attending Events</li>
 		</ul>
-		<div class="tab-content current" id="tab-1"><?php createdEventBox($owner); ?></div>
-		<div class="tab-content" id="tab-2"><?php attendingEventBox(); ?></div>
+		<div class="tab-content current" id="tab-1"><?php createdEventBox($userID, $owner); ?></div>
+		<div class="tab-content" id="tab-2"><?php attendingEventBox($userID); ?></div>
 	</div>
 </body>
 </html>

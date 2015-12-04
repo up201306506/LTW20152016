@@ -1,7 +1,7 @@
 <?php
 
-function createdEventBox($owner) {
-	$userevents = getEventsByUserID($_SESSION['user_id']);
+function createdEventBox($userID, $owner) {
+	$userevents = getEventsByUserID($userID);
 	$eventtypes = getAllEventTypes();
 				
 	if (!empty($userevents)) {	
@@ -34,8 +34,8 @@ function createdEventBox($owner) {
 	}
 }
 
-function attendingEventBox() {
-	$userattendance = getEventsUserAttends($_SESSION['user_id']);
+function attendingEventBox($userID) {
+	$userattendance = getEventsUserAttends($userID);
 	$eventtypes = getAllEventTypes();
 	
 	if (!empty($userattendance)) {
