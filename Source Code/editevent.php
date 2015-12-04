@@ -68,7 +68,8 @@
 				<input type="submit" value="Change Image" name="SubmitImage"><br>	
 			</form>
 		</div>
-		
+		<br><input class="NavigationButton" Onclick="location.href = 'event.php?id=<?php echo $_GET['id'] ;?>';" type="button" value="Go Back" name="GoBackButton">
+	
 		
 		
 		<?php

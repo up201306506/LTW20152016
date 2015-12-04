@@ -64,6 +64,9 @@ else if(isset($_POST['SubmitImage']) && !empty($_FILES["ImageUpload"]["name"]))
 			
 			updateImageEvent($event_to_edit, $target_name);
 			
+
+			echo '<br><br><a href="../event.php?id='.$event_to_edit.'">Go Back...</>';
+			
 		} 
 		else 
 		{
