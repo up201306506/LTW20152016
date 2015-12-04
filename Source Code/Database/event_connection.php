@@ -14,13 +14,6 @@ function getEventsByUserID($ID) {
 	$result = $stmt->fetchAll();
 	return $result;
 }
-function getEventsUserAttends($User_ID) {
-	$db_events = new PDO('sqlite:Database/eventerer.db');
-	$stmt = $db_events->prepare('SELECT * FROM events WHERE id in (SELECT e_id FROM user_attends_event WHERE u_id = ?)');
-	$stmt->execute(array($User_ID));
-	$result = $stmt->fetchAll();
-	return $result;
-}
 function existsEventByID($ID) {
 	$db_events = new PDO('sqlite:Database/eventerer.db');
 	$stmt = $db_events->prepare('SELECT * FROM events WHERE id = ?');
@@ -53,6 +46,33 @@ function deleteEvent($event_primary_id){
 	$stmt = $db_events->prepare('DELETE FROM events WHERE id = ?');
 	$stmt->execute(array($event_primary_id));
 }
+
+
+function getEventsUserAttends($User_ID) {
+	$db_events = new PDO('sqlite:Database/eventerer.db');
+	$stmt = $db_events->prepare('SELECT * FROM events WHERE id in (SELECT e_id FROM user_attends_event WHERE u_id = ?)');
+	$stmt->execute(array($User_ID));
+	$result = $stmt->fetchAll();
+	return $result;
+}
+function insertAttend($eventID, $userID){
+	$db_events = new PDO('sqlite:Database/eventerer.db');
+	$stmt = $db_events->prepare('INSERT INTO user_attends_event VALUES (NULL, :user, :event)');
+	$stmt->bindParam(':user', $userID);
+	$stmt->bindParam(':event', $eventID);
+	$stmt->execute();
+	
+}
+function checkIfUserAttends($eventID, $userID){
+	$db_events = new PDO('sqlite:Database/eventerer.db');
+	$stmt = $db_events->prepare('SELECT * FROM user_attends_event WHERE u_id = :user AND e_id = :event ');
+	$stmt->bindParam(':user', $userID);
+	$stmt->bindParam(':event', $eventID);
+	$stmt->execute();
+	$result = $stmt->fetchAll();
+	return (!empty($result));
+}
+
 
 /*Must be accessed from withint the PHP folder*/
 function updateImageEvent($eventID, $value) {

@@ -36,6 +36,19 @@
 			?>
 				<div class="eventBox">
 					<h1><?php echo $this_event['event_id'];?></h1>
+					<?php if(checkIfUserAttends($this_event['id'] , $_SESSION['user_id'])) {?>
+						<span class="YoureAttending">You're going!</span>
+						<form action="" method="post">
+							<input name="LeaveEvent" type="submit" value="Leave Event">
+						</form>
+						<br>
+					<?php } else { ?>
+						<span class="YoureNtAttending">You're not going!</span>
+						<form action="" method="post">
+							<input name="JoinEvent" type="submit" value="Join Event">
+						</form>
+						<br>
+					<?php } ?>
 					<span class="EventCreator"> Creator: <?php echo getUserByID($this_event['user_id'])['user_name']; ?></span><br>
 					<span class="EventType"> <?php echo $eventtype['type']; ?></span><br>
 					<span class="EventDate"> Date: <?php echo $this_event['date']; ?></span><br>
