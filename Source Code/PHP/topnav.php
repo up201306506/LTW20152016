@@ -3,7 +3,12 @@
 	<li><a href="PHP/logout.php">Log Out</a></li>
 	<li><a href="settings.php">Settings</a></li>
 	<li><a href="profile.php">User: <?php echo $_SESSION['login_user']; ?></a></li>
-	<li><input id="search_bar" class="search_bar" type="text" placeholder="SEARCH EVENT"></li>
-	<img class="lupa" src="Images/lupa.png">
+	<li>
+		<form action="searchbar.php" method="get">
+			<input id="search_bar" name="search_bar" class="search_bar" type="text" placeholder="SEARCH">
+			<img class="lupa" src="Images/lupa.png" type="submit">
+			<input type="submit">
+		</form>
+	</li>
 </ul>
 <div class="spacing"></div>
