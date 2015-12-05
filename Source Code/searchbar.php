@@ -16,10 +16,11 @@
 		{
 			header('Location: index.php');
 		}
-		$search = $_GET['search_bar'];
+		$search = $_GET['search-text'];
 		if(empty($search))
 		{
-			header('Location: profile.php');
+			echo '<script>window.location = "profile.php?id=' . $_SESSION['user_id'] . '";</script>';
+			
 		}
 		include 'PHP/topnav.php';
 		include 'Database/user_connection.php';
