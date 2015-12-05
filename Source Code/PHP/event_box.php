@@ -2,7 +2,6 @@
 
 function createdEventBox($userID, $owner) {
 	$userevents = getEventsByUserID($userID);
-	$eventtypes = getAllEventTypes();
 				
 	if (!empty($userevents)) {	
 		foreach($userevents as $row) {
@@ -17,7 +16,7 @@ function createdEventBox($userID, $owner) {
 
 			<div class="event_box">
 				<a class="event_id" href=<?php echo $link; ?>><?php echo $row['event_id']; ?></a>
-				<span class="event_type"><?php echo $eventtypes[$row['type']]['type']; ?></span>
+				<span class="event_type"><?php echo getEventsByTypeID($row['type'])['type']; ?></span>
 				<span class="event_user">Created by: <?php echo $creator['user_name']; ?></span>
 				<span class="event_date"><?php echo $row['date']; ?></span>
 				<img class="event_img" src=<?php echo $imgPath; ?> alt=<?php echo $alt; ?>>
@@ -36,7 +35,6 @@ function createdEventBox($userID, $owner) {
 
 function attendingEventBox($userID) {
 	$userattendance = getEventsUserAttends($userID);
-	$eventtypes = getAllEventTypes();
 	
 	if (!empty($userattendance)) {
 		foreach($userattendance as $row) {
@@ -51,7 +49,7 @@ function attendingEventBox($userID) {
 
 			<div class="event_box">
 				<a class="event_id" href=<?php echo $link; ?>><?php echo $row['event_id']; ?></a>
-				<span class="event_type"><?php echo $eventtypes[$row['type']]['type']; ?></span>
+				<span class="event_type"><?php echo getEventsByTypeID($row['type'])['type']; ?></span>
 				<span class="event_user">Created by: <?php echo $creator['user_name']; ?></span>
 				<span class="event_date"><?php echo $row['date']; ?></span>
 				<img class="event_img" src=<?php echo $imgPath; ?> alt=<?php echo $alt; ?>>

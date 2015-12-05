@@ -4,7 +4,8 @@ CREATE TABLE user (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	admin INTEGER,
 	user_name VARCHAR,
-	password VARCHAR
+	password VARCHAR,
+	image_path VARCHAR
 );
 CREATE TABLE events (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -40,25 +41,27 @@ INSERT INTO user VALUES (
 	NULL,
 	1,
 	'admin',
-	'password'
+	'password',
+	'default'
 );
 INSERT INTO user VALUES (
 	NULL,
 	0,
 	'username',
-	'password'
+	'password',
+	'default'
 );
 INSERT INTO events VALUES (
-	NULL, 'TEST_EVENT_1', '1',
-	'eventimage_default', '1999-January-01',
-	'TEST EVENT',
+	NULL, 'Anos do Sr. Vossa Excelência, o Admin', '1',
+	'eventimage_default', '2015-December-5',
+	'Jantar e depois Cinema no Arrábida',
 	1
 );
 INSERT INTO events VALUES (
-	NULL, 'TEST_EVENT_2', '1',
-	'eventimage_default', '1999-January-01',
+	NULL, 'BEBER ATE MORRER!', '1',
+	'eventimage_default', '2015-December-31',
 	'TEST EVENT',
-	1
+	6
 );
 INSERT INTO event_types VALUES (
 	NULL,
@@ -79,6 +82,10 @@ INSERT INTO event_types VALUES (
 INSERT INTO event_types VALUES (
 	NULL,
 	'Conference'
+);
+INSERT INTO event_types VALUES (
+	NULL,
+	'Holiday'
 );
 INSERT INTO user_attends_event VALUES (
 	NULL,
@@ -113,6 +120,6 @@ INSERT INTO comments VALUES (
 	NULL,
 	1,
 	1,
-	'Diz isso outra vez e bano-te do site'
+	'Diz isso outra vez és banido do site'
 
 );
