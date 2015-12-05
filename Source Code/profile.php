@@ -37,10 +37,8 @@
 	} else {
 	?>
 
-	<div class="user-info">
-		<img id="ProfileUserImage" src='<?php echo "Images/Users/".getUserByID($userID)['image_path'].".jpg" ; ?>'>
-		<span id="ProfileUserName"><?php echo getUserByID($userID)['user_name']; ?></span>
-	</div>
+	<img id="ProfileUserImage" src='<?php echo "Images/Users/".getUserByID($userID)['image_path'].".jpg" ; ?>'>
+	<span id="ProfileUserName"><?php echo getUserByID($userID)['user_name']; ?></span>
 
 	<?php
 	if ($owner){

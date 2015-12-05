@@ -47,7 +47,6 @@ html, body {
 	text-decoration: none;
 	border-left: 1px solid #2e2e2e;
 	font-family: 'Jura', sans-serif;
-	/*text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);*/
 }
 
 .nave li a:hover {
@@ -123,12 +122,6 @@ html, body {
 .user-options a {
 	padding: 0 26px;
 	border-left: 0 none;
-}
-
-.user-options > a {
-	background-repeat: no-repeat;
-	background-position: 85% center;
-	background-image: url('../Images/triangle.png');
 }
 
 .subnav {
