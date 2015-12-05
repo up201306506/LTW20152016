@@ -20,9 +20,8 @@
 		include 'Database/user_connection.php';
 		include 'PHP/changeuser.php';
 		include 'PHP/changepass.php';
-
 	?>
-	<form class="accordion" action="" method="post">
+	<!-- <form class="accordion" action="" method="post">
 			<div class="accordion-section">
 				<a class="accordion-section-title" href="#ChangeUsername">Change Username</a>
 				<div id="ChangeUsername" class="accordion-section-content">
@@ -64,6 +63,6 @@
 
 				</div>
 			</div>			
-	</form>
+	</form> -->
 </body>
 </html>

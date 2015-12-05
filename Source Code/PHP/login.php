@@ -17,7 +17,7 @@ if (isset($_POST['login'])) {
 			$_SESSION['user_id'] = $user['id'];
 			header('Location: profile.php');
 		} else {
-			$error = '1Username or Password is invalid!';
+			$error = 'Username or Password is invalid!';
 		}
 	}
 }

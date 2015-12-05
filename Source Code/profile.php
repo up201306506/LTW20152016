@@ -12,12 +12,11 @@
 <body>
 	<?php
 		session_start();
-		if(empty($_SESSION))
-		{
+		if(empty($_SESSION)) {
 			header('Location: index.php');
 		}
 		if (empty($_GET)) {
-			header('Location: profile.php?id='.$_SESSION['user_id']);
+			echo '<script>window.location = "profile.php?id=' . $_SESSION['user_id'] . '";</script>';
 		}	
 		
 		$owner = false;
@@ -32,7 +31,7 @@
 		include 'PHP/topnav.php';
 		include 'PHP/event_deletion.php';
 		include 'PHP/event_box.php';
-	
+
 	if ($owner){
 	?>
 		<input class="add_event" Onclick="location.href = 'newevent.php';" type="button" value="Add Event" name="AddEventButton">
