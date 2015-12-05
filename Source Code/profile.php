@@ -32,6 +32,12 @@
 		include 'PHP/event_deletion.php';
 		include 'PHP/event_box.php';
 
+	if (!existsUserByID($userID))
+	{
+		?><span id="message">There is no user with this ID</span><?php
+	}
+	else
+	{
 	if ($owner){
 	?>
 		<input class="add_event" Onclick="location.href = 'newevent.php';" type="button" value="Add Event" name="AddEventButton">
@@ -44,5 +50,6 @@
 		<div class="tab-content current" id="tab-1"><?php createdEventBox($userID, $owner); ?></div>
 		<div class="tab-content" id="tab-2"><?php attendingEventBox($userID); ?></div>
 	</div>
+	<?php } ?>
 </body>
 </html>

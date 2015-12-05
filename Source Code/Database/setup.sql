@@ -60,7 +60,7 @@ INSERT INTO events VALUES (
 INSERT INTO events VALUES (
 	NULL, 'BEBER ATE MORRER!', '1',
 	'eventimage_default', '2015-December-31',
-	'TEST EVENT',
+	'Isso queria eu, mas vou passar com os meus avós',
 	6
 );
 INSERT INTO event_types VALUES (
