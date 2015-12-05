@@ -24,13 +24,13 @@ body {
 	display: block;
 	cursor: pointer;
 	margin: 1em auto;
-	background-color: #333;
+	background-color: #1f7f5c;
 	transition: all linear 0.15s;
 	font-family: 'Jura', sans-serif;
 }
 
 .add_event:hover {
-	background-color: #4c4c4c;
+	background: rgb(64, 151, 119);
 }
 
 .event-container {
