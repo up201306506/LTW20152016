@@ -1,6 +1,5 @@
 <?php
 
-//session_start();
 $error = '';
 
 if (isset($_POST['submit_password'])) {
@@ -10,7 +9,7 @@ if (isset($_POST['submit_password'])) {
 		$Userid = $_SESSION['user_id'];
 		$newpassword = $_POST['newpassword'];
 		changePassword($Userid, $newpassword);
-		header("Location:profile.php");
+		echo '<script>window.location = "profile.php"</script>';
 	}
 }
 

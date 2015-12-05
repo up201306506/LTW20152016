@@ -19,43 +19,35 @@ if(isset($_SESSION['login_user'])) {
 </head>
 <body>
 	<img src="Images/Logo2.png">
-
 	<form class="accordion" action="" method="post">
-
-			<div class="accordion-section">
-				<a class="accordion-section-title" href="#Login">Login</a>
-				<div id="Login" class="accordion-section-content">
-					<div class="username">
-						<input id="usernamefocus1" name="username_login" type="text" placeholder="USERNAME">
-					</div>
-
-					<div class="password">
-						<input name="password_login" type="password" placeholder="PASSWORD">
-					</div>
-
-					<div class="login">
-						<input name="login" type="submit" value="LOG IN">
-					</div>
+		<div class="accordion-section">
+			<a class="accordion-section-title" href="#Login">Log In</a>
+			<div id="Login" class="accordion-section-content">
+				<div class="username">
+					<input id="usernamefocus1" name="username_login" type="text" placeholder="USERNAME">
+				</div>
+				<div class="password">
+					<input name="password_login" type="password" placeholder="PASSWORD">
+				</div>
+				<div class="login">
+					<input name="login" type="submit" value="LOG IN">
 				</div>
 			</div>
-
-			<div class="accordion-section">
-				<a class="accordion-section-title" href="#Signup">Signup</a>
-				<div id="Signup" class="accordion-section-content">
-					<div class="username">
-						<input id="usernamefocus2" name="username_signup" type="text" placeholder="USERNAME">
-					</div>
-
-					<div class="password">
-						<input name="password_signup" type="password" placeholder="PASSWORD">
-					</div>
-
-					<div class="signup">
-						<input name="signup" type="submit" value="SIGN UP">
-					</div>
+		</div>
+		<div class="accordion-section">
+			<a class="accordion-section-title" href="#Signup">Sign Up</a>
+			<div id="Signup" class="accordion-section-content">
+				<div class="username">
+					<input id="usernamefocus2" name="username_signup" type="text" placeholder="USERNAME">
+				</div>
+				<div class="password">
+					<input name="password_signup" type="password" placeholder="PASSWORD">
+				</div>
+				<div class="signup">
+					<input name="signup" type="submit" value="SIGN UP">
 				</div>
 			</div>
-			
+		</div>
 	</form>
 </body>
 </html>
