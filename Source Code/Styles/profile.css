@@ -13,6 +13,18 @@ body {
 	background-size: cover;*/
 }
 
+.user-info {
+	width: 100px;
+	display: block;
+	margin: 1em auto;
+}
+
+.user-info span {
+	display: block;
+	text-align: center;
+	font-family: 'Jura', sans-serif;
+}
+
 .add_event {
 	outline: 0;
 	padding: 0;
@@ -23,7 +35,7 @@ body {
 	font-size: 1em;
 	display: block;
 	cursor: pointer;
-	margin: 1em auto;
+	margin: 0 auto 1em auto;
 	background-color: #1f7f5c;
 	transition: all linear 0.15s;
 	font-family: 'Jura', sans-serif;
@@ -58,7 +70,7 @@ body {
 
 .tabs .current {
 	background-color: #333;
-	border-bottom: 0.07em solid #FFF;
+	border-bottom: 1px solid #2e2e2e;
 }
 
 .tabs li:not(.current):hover {
@@ -142,28 +154,11 @@ body {
 	font-size: 1em;
 	margin: auto;
 	cursor: pointer;
-	background-color: #333;
+	background-color: #1f7f5c;
 	transition: all linear 0.15s;
 	font-family: 'Jura', sans-serif;
 }
 
 .delete_button:hover {
-	background-color: #4c4c4c;
+	background: rgb(64, 151, 119);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

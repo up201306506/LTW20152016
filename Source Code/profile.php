@@ -32,23 +32,22 @@
 		include 'PHP/event_deletion.php';
 		include 'PHP/event_box.php';
 
-	if (!existsUserByID($userID))
-	{
+	if (!existsUserByID($userID)) {
 		?><h1 id="ProfileUserName">There is no user with this ID</span><?php
-	}
-	else
-	{
+	} else {
 	?>
-	<h1 id="ProfileUserName"> <?php echo getUserByID($userID)['user_name']; ?> </h1>
-	<img id="ProfileUserImage" src='<?php echo "Images/Users/".getUserByID($userID)['image_path'].".jpg" ; ?>' />
+
+	<div class="user-info">
+		<img id="ProfileUserImage" src='<?php echo "Images/Users/".getUserByID($userID)['image_path'].".jpg" ; ?>'>
+		<span id="ProfileUserName"><?php echo getUserByID($userID)['user_name']; ?></span>
+	</div>
+
 	<?php
 	if ($owner){
 	?>
 		<input class="add_event" Onclick="location.href = 'newevent.php';" type="button" value="Add Event" name="AddEventButton">
 	<?php } else { echo "<br>";} ?>
-	
-	
-	
+
 	<div class="event-container">
 		<ul class="tabs">
 			<li class="tab-link current" data-tab="tab-1">Created Events</li>
