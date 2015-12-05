@@ -14,16 +14,19 @@ body {
 }
 
 .form-container {
+	top: 50%;
+	left: 50%;
 	width: 600px;
-	margin: 1em auto;
 	display: block;
+	position: absolute;
+	transform: translate(-50%, -47%);
 }
 
 .form {
 	width: 100%;
 	margin: auto;
 	display: block;
-	background-color: #333;
+	background-color: #4a4a4a;
 	font-family: 'Jura', sans-serif;
 }
 
@@ -32,7 +35,8 @@ body {
 	margin: auto;
 	display: block;
 	text-align: center;
-	border-bottom: 0.07em solid #FFF; 
+	background-color: #333;
+	border-bottom: 0.07em solid #2e2e2e; 
 }
 
 span {
@@ -41,7 +45,6 @@ span {
 	margin: auto;
 	display: block;
 	text-align: center;
-	border: 0.05em solid #FFF;
 }
 
 .id {
@@ -90,11 +93,11 @@ span {
 	display: block;
 	cursor: pointer;
 	margin: 1em auto 0 auto;
-	background-color: #333;
+	background-color: #1f7f5c;
 	transition: all linear 0.15s;
 	font-family: 'Jura', sans-serif;
 }
 
 .event_submit:hover {
-	background-color: #4c4c4c;
+	background: rgb(64, 151, 119);
 }
