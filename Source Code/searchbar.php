@@ -38,7 +38,6 @@
 		<div class="tab-content current" id="tab-1">
 			<?php
 				$allevents = getAllEvents();
-				$eventypes = getAllEventTypes();
 				if (!empty($allevents))
 				{	
 					foreach($allevents as $row)
@@ -49,7 +48,7 @@
 							$creator = getUserByID($row['user_id']);
 							echo '<div class="searchBox">';
 								echo '<a href="event.php?id=' . $row['id'] . '"><span>' . $row['event_id'] . '<span></a><br>';
-								echo '<span class="EventType">' . $eventypes[$row['type']]['type'] . '<span><br>';
+								echo '<span class="EventType">' . getEventsByTypeID($row['type'])['type'] . '<span><br>';
 								echo '<span class="EventUser"> Created by: '. $creator['user_name'] . '<span><br>';
 								echo '<span class="EventDate">' . $row['date'] . '<span><br>';
 								echo '<img src="Images/Event/'.$row['image_path'].'.jpg" alt="image_'.$row['event_id'].'" class="event_image"/>';
