@@ -21,18 +21,27 @@ body {
     font-family: 'Jura', sans-serif;
 }
 
-.user-pass form {
+.new-image-form {
+    float: top;
+    width: 100%;
+    display: block;
+    background: #4a4a4a;
+    padding-bottom: 1em;
+}
+
+.new-user-form {
     float: left;
     width: 349px;
     display: block;
     background: #4a4a4a;
-}
-
-.new-user-form {
     border-right: 1px solid #FFF;
 }
 
 .new-pass-form {
+    float: left;
+    width: 349px;
+    display: block;
+    background: #4a4a4a;
     border-left: 1px solid #FFF;
 }
 
@@ -42,6 +51,22 @@ body {
     background: #333;
     text-align: center;
     border-bottom: 1px solid #2e2e2e;
+}
+
+.file-upload {
+    display: block;
+    padding: 1em 5em 2em 15em;
+}
+
+.file-upload label {
+    float: left;
+    display: block;
+}
+
+.file-upload input {
+    float: right;
+    display: block;
+    border: none;
 }
 
 .text {
@@ -56,10 +81,24 @@ body {
 
 .text input {
     outline: 0;
+    float: right;
     width: 150px;
     height: 1.2em;
-    float: right;
     display: block;
+    font-family: 'Jura', sans-serif;
+}
+
+.new-image-form input[type="submit"] {
+    outline: 0;
+    margin: auto;
+    color: white;
+    border: none;
+    padding: 1em;
+    display: block;
+    font-size: 1em;
+    cursor: pointer;
+    background: #1f7f5c;
+    transition: all 0.15s;
     font-family: 'Jura', sans-serif;
 }
 
@@ -77,7 +116,7 @@ body {
     font-family: 'Jura', sans-serif;
 }
 
-.new-user-form input[type="submit"]:hover, .new-pass-form input[type="submit"]:hover {
+.new-user-form input[type="submit"]:hover, .new-pass-form input[type="submit"]:hover, .new-image-form input[type="submit"]:hover {
     background: rgb(64, 151, 119);
 }
 

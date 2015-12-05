@@ -23,6 +23,14 @@
 		include 'PHP/changeimage.php';
 	?>
 	<div class="user-pass">
+		<form class="new-image-form" action="" method="post" enctype="multipart/form-data">
+			<span class="title">Change Profile Image</span>
+			<div class="file-upload">
+				<label for="newimage">Upload File:</label>
+				<input id="newimage" name="newimage" type="file">
+			</div>
+			<input type="submit" value="Submit" name="submit_image">
+		</form>
 		<form class="new-user-form" action="" method="post">
 			<span class="title">Change Username</span>
 			<div class="text">
@@ -46,19 +54,6 @@
 				<input type="password" id="newpassword" name="newpassword">
 			</div>
 			<input type="submit" value="Submit" name="submit_password">
-		</form>
-		
-		<br>
-		
-		<form class="new-image-form" action="" method="post" enctype="multipart/form-data">
-			<div class="fileupload">
-						<label for="newimage">Upload File</label>
-						<input class="ImageUpload" id="newimage" name="newimage" type="file">
-					</div>
-					<br>
-					<div class="button">
-						<input name="submit_image" type="submit" value="Ok">
-			</div>
 		</form>
 	</div>
 </body>
