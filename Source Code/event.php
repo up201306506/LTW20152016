@@ -59,7 +59,7 @@
 					<span class="EventDate"> Date: <?php echo $this_event['date']; ?></span><br>
 					<img class="EventImg" src="Images/Event/<?php echo $this_event['image_path']; ?>.jpg"/><br>
 					
-					<span class="EventDescription"> Descripion: <?php echo $this_event['description']; ?></span><br>
+					<span class="EventDescription"> Description: <?php echo $this_event['description']; ?></span><br>
 					
 					<span class="EventShowUpsLabel"> People Going(<?php echo countAttendingUsers($this_event['id']); ?>):</span>
 					<span class="EventShowUps">

@@ -34,14 +34,21 @@
 
 	if (!existsUserByID($userID))
 	{
-		?><span id="message">There is no user with this ID</span><?php
+		?><h1 id="ProfileUserName">There is no user with this ID</span><?php
 	}
 	else
 	{
+	?>
+	<h1 id="ProfileUserName"> <?php echo getUserByID($userID)['user_name']; ?> </h1>
+	<img id="ProfileUserImage" src='<?php echo "Images/Users/".getUserByID($userID)['image_path'].".jpg" ; ?>' />
+	<?php
 	if ($owner){
 	?>
 		<input class="add_event" Onclick="location.href = 'newevent.php';" type="button" value="Add Event" name="AddEventButton">
 	<?php } else { echo "<br>";} ?>
+	
+	
+	
 	<div class="event-container">
 		<ul class="tabs">
 			<li class="tab-link current" data-tab="tab-1">Created Events</li>

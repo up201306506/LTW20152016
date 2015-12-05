@@ -42,14 +42,14 @@ INSERT INTO user VALUES (
 	1,
 	'admin',
 	'password',
-	'default'
+	'userimage_default'
 );
 INSERT INTO user VALUES (
 	NULL,
 	0,
 	'username',
 	'password',
-	'default'
+	'userimage_default'
 );
 INSERT INTO events VALUES (
 	NULL, 'Anos do Sr. Vossa Excelência, o Admin', '1',
