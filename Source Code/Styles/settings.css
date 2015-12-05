@@ -73,6 +73,7 @@ body {
     cursor: pointer;
     margin: 1em auto;
     background: #1f7f5c;
+    transition: all 0.15s;
     font-family: 'Jura', sans-serif;
 }
 

@@ -21,6 +21,9 @@ html, body {
 	display: block;
 	position: fixed;
 	background: #333;
+	box-shadow: 0 0 15px 0 black;
+	-moz-box-shadow: 0 0 15px 0 black;
+	-webkit-box-shadow: 0 0 15px 0 black;
 }
 
 .home-icon {
@@ -44,7 +47,7 @@ html, body {
 	text-decoration: none;
 	border-left: 1px solid #2e2e2e;
 	font-family: 'Jura', sans-serif;
-	text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+	/*text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);*/
 }
 
 .nave li a:hover {
@@ -130,7 +133,7 @@ html, body {
 
 .subnav {
 	right: 0;
-	top: 110%;
+	top: 100%;
 	opacity: 0;
 	width: 200px;
 	height: auto;
@@ -155,7 +158,6 @@ html, body {
 }
 
 .user-options:hover .subnav {
-	top: 100%;
 	opacity: 1;
 	visibility: visible;
 }
