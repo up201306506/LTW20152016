@@ -12,7 +12,7 @@ if (isset($_POST['login'])) {
 		$password = $_POST['password_login'];
 		$user = getUserByUserName($username);
 
-		if (!empty($user) && $user['password'] == $password) {
+		if (!empty($user) &&  password_verify($password, $user['password'])) {
 			$_SESSION['login_user'] = $username;
 			$_SESSION['user_id'] = $user['id'];
 			echo '<script>window.location = "profile.php"</script>';

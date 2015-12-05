@@ -8,7 +8,11 @@ if (isset($_POST['signup'])) {
 	} else {
 		$username = $_POST['username_signup'];
 		$password = $_POST['password_signup'];
-		insertIntoUser($username, $password);
+		
+		$options =['cost' => strlen($username)];
+		$hashedpass = password_hash($password, PASSWORD_DEFAULT, $options);
+		
+		insertIntoUser($username, $hashedpass);
 	}
 }
 

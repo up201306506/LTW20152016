@@ -34,7 +34,7 @@ function getUserByUserName($name) {
 
 function insertIntoUser($username, $password) {
 	$db_users = new PDO('sqlite:Database/eventerer.db');
-	$stmt = $db_users->prepare('INSERT INTO user VALUES (NULL, 0, :user, :pass, "default")');
+	$stmt = $db_users->prepare('INSERT INTO user VALUES (NULL, 0, :user, :pass, "userimage_default")');
 	$stmt->bindParam(':user', $username);
 	$stmt->bindParam(':pass', $password);
 	$stmt->execute();

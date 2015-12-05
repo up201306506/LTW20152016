@@ -41,14 +41,14 @@ INSERT INTO user VALUES (
 	NULL,
 	1,
 	'admin',
-	'password',
+	'$2y$05$iOpT5jCIP/.obs9HUBsfWOr7efW4j8MtuelLvNlCBwXEaqiMp2wCy',
 	'userimage_default'
 );
 INSERT INTO user VALUES (
 	NULL,
 	0,
 	'username',
-	'password',
+	'$2y$08$AVeE/DlNBkI6zQ1cZZyRHe//KnraRQiMitKu/LpQveMCeoAKA2E5a',
 	'userimage_default'
 );
 INSERT INTO events VALUES (
