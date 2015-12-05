@@ -15,6 +15,10 @@ if (isset($_POST['login'])) {
 		if (!empty($user) &&  password_verify($password, $user['password'])) {
 			$_SESSION['login_user'] = $username;
 			$_SESSION['user_id'] = $user['id'];
+			
+			if (!isset($_SESSION['csrf_token'])) {
+				$_SESSION['csrf'] = getToken(16);}
+			
 			echo '<script>window.location = "profile.php"</script>';
 		} else {
 			$error = 'Username or Password is invalid!';

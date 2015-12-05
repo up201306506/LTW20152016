@@ -1,4 +1,5 @@
 <?php
+include ('PHP/crypto.php');
 include('PHP/login.php');
 include('PHP/signup.php');
 
