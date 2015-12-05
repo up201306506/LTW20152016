@@ -20,6 +20,7 @@
 		include 'Database/user_connection.php';
 		include 'PHP/changeuser.php';
 		include 'PHP/changepass.php';
+		include 'PHP/changeimage.php';
 	?>
 	<div class="user-pass">
 		<form class="new-user-form" action="" method="post">
@@ -45,6 +46,19 @@
 				<input type="password" id="newpassword" name="newpassword">
 			</div>
 			<input type="submit" value="Submit" name="submit_password">
+		</form>
+		
+		<br>
+		
+		<form class="new-image-form" action="" method="post" enctype="multipart/form-data">
+			<div class="fileupload">
+						<label for="newimage">Upload File</label>
+						<input class="ImageUpload" id="newimage" name="newimage" type="file">
+					</div>
+					<br>
+					<div class="button">
+						<input name="submit_image" type="submit" value="Ok">
+			</div>
 		</form>
 	</div>
 </body>
