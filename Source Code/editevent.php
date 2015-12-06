@@ -35,6 +35,7 @@
 		?>
 
 		<form class="edit-container" action="PHP/event_edit.php" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>">
 			<div class="edit-form">
 				<span class="title">Edit Event</span>
 					<input type="hidden" name="Event_ID_Value" value="<?php echo $this_event['id']; ?>">

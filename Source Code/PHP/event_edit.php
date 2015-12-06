@@ -1,6 +1,8 @@
 <?php
 
-if (isset($_POST['SubmitEvent'])) {
+session_start();
+
+if (isset($_POST['SubmitEvent']) && $_SESSION['csrf'] == $_POST['csrf']) {
 	include '../Database/event_connection.php';
 	$event_to_edit = $_POST['Event_ID_Value'];
 	$event_date = '' . $_POST['year'] . '-' . $_POST['month'] . '-' . $_POST['day'];
@@ -17,7 +19,7 @@ if (isset($_POST['SubmitEvent'])) {
 
 
 
-else if(isset($_POST['SubmitImage']) && !empty($_FILES["ImageUpload"]["name"]))
+else if(isset($_POST['SubmitImage']) && !empty($_FILES["ImageUpload"]["name"]) && $_SESSION['csrf'] == $_POST['csrf'])
 {
 	include '../Database/event_connection.php';
 	
