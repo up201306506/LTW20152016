@@ -45,6 +45,7 @@ body {
 	width: 300px;
 	margin: auto;
 	display: block;
+	font-size: 1em;
 	text-align: center;
 }
 
@@ -55,6 +56,7 @@ body {
 	width: 600px;
 	height: 250px;
 	display: block;
+	font-size: 1em;
 }
 
 .event-type {
