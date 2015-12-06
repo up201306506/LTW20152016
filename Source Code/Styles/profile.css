@@ -7,10 +7,6 @@ html, body {
 
 body {
 	background-color: #e9eaed;
-	/*background-image: url("../Images/background.jpg");
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;*/
 }
 
 #ProfileUserImage {
@@ -29,8 +25,7 @@ body {
 .add_event {
 	outline: 0;
 	padding: 0;
-	width: 10em;
-	height: 3em;
+	padding: 1em;
 	border: none;
 	color: white;
 	font-size: 1em;
@@ -104,6 +99,7 @@ body {
 }
 
 .event_box form {
+	padding-top: 1em;
 	padding-bottom: 1em;
 }
 
@@ -144,7 +140,8 @@ body {
 	display: block;
 	max-width: 300px;
 	max-height: 200px;
-	padding-bottom: 1em;
+/*	padding-bottom: 1em;*/
+	border: 1px solid black;
 }
 
 .delete_button {
@@ -162,4 +159,9 @@ body {
 
 .delete_button:hover {
 	background: #f3989a;
+}
+
+.no-results {
+	display: block;
+	text-align: center;
 }

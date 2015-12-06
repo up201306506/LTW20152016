@@ -33,13 +33,12 @@ $user = getUserByID($_GET['id']);
 </head>
 <body>
 	<?php
-
 	
-		include 'Database/event_type_connection.php';
-		include 'Database/event_connection.php';
-		include 'PHP/topnav.php';
-		include 'PHP/event_deletion.php';
-		include 'PHP/event_box.php';
+	include 'Database/event_type_connection.php';
+	include 'Database/event_connection.php';
+	include 'PHP/topnav.php';
+	include 'PHP/event_deletion.php';
+	include 'PHP/event_box.php';
 
 	if (!existsUserByID($userID)) {
 		?><h1 id="ProfileUserName">There is no user with this ID</span><?php

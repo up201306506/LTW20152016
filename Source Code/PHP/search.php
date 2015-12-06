@@ -6,6 +6,7 @@ include 'Database/event_connection.php';
 function getSearchedEvents($search) {
 	$found = false;
 	$allevents = getAllEvents();
+
 	if (!empty($allevents)) {
 		foreach ($allevents as $row) {
 			if (strpos(strtolower($row['event_id']), strtolower($search)) !== false) {
@@ -26,6 +27,7 @@ function getSearchedEvents($search) {
 function getSearchedUsers($search) {
 	$found = false;
 	$allusers = getAllUsers();
+	
 	if (!empty($allusers)) {
 		foreach($allusers as $row) {
 			if(strpos(strtolower($row['user_name']), strtolower($search)) !== false) {
