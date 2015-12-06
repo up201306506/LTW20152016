@@ -73,14 +73,16 @@
 				</div> 
 				<div class="comments-container">
 					<span class="comments-title" id="commentBoxHeader">Comments:</span>
-						<?php 
+						<?php
 							$comments = getAllCommentsForEvent($this_event['id']);						
 							foreach ($comments as $rows) {
+								$link = '"profile.php?id=' . getUserByID($rows['u_id'])['id'] . '"';
 							?>
 								<div class="comment-box">
 									<div class="comment-content">
 										<img class="profile-image" src='<?php echo "Images/Users/" . getUserByID($rows['u_id'])['image_path'] . ".jpg";?>'>
-										<span class="comment-name"><?php echo '   '.getUserByID($rows['u_id'])['user_name'] . ': '; ?></span>
+										<a class="comment-name" href=<?php echo $link; ?>><?php echo '   '.getUserByID($rows['u_id'])['user_name'] . ': '; ?></a>
+										<!-- <span class="comment-name"><?php echo '   '.getUserByID($rows['u_id'])['user_name'] . ': '; ?></span> -->
 									</div>
 									<span class="comment-text"><?php echo '   '.$rows['message']; ?></span>
 										<?php 
