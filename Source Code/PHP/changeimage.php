@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST['submit_image']) && !empty($_FILES["newimage"]["name"]) ) 
+if (isset($_POST['submit_image']) && !empty($_FILES["newimage"]["name"])  && $_SESSION['csrf'] == $_POST['csrf'] ) 
 {
 	$user_to_edit = $_SESSION['user_id'];
 	$target_name = "userimage_" . $user_to_edit;
