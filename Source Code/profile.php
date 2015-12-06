@@ -1,8 +1,15 @@
+<?php
+
+include 'Database/user_connection.php';
+$user = getUserByID($_GET['id']);
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Your Profile</title>
+	<title><?php echo $user['user_name']; ?>'s Profile</title>
 	<script src="JQuery/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="JQuery/tabs.js"></script>
 	<link rel="stylesheet" type="text/css" href="Styles/topnav.css">
@@ -28,7 +35,6 @@
 	
 		include 'Database/event_type_connection.php';
 		include 'Database/event_connection.php';
-		include 'Database/user_connection.php';
 		include 'PHP/topnav.php';
 		include 'PHP/event_deletion.php';
 		include 'PHP/event_box.php';
