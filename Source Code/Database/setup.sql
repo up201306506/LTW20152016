@@ -49,7 +49,7 @@ INSERT INTO user VALUES (
 	0,
 	'username',
 	'$2y$08$AVeE/DlNBkI6zQ1cZZyRHe//KnraRQiMitKu/LpQveMCeoAKA2E5a',
-	'userimage_default'
+	'userimage_2'
 );
 INSERT INTO events VALUES (
 	NULL, 'Anos do Sr. Vossa Excelência, o Admin', '1',
@@ -106,14 +106,14 @@ INSERT INTO comments VALUES (
 	NULL,
 	1,
 	1,
-	'E para partilhar a conta'
+	'E para dividir a conta do jantar'
 
 );
 INSERT INTO comments VALUES (
 	NULL,
 	2,
 	1,
-	'Entao vou pedir a dobrar'
+	'Entao vou pedir champanhe'
 
 );
 INSERT INTO comments VALUES (
