@@ -12,3 +12,156 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;*/
 }
+
+.edit-container {
+	width: 700px;
+	display: block;
+	margin: 1em auto;
+}
+
+.edit-form {
+	width: 100%;
+	margin: auto;
+	display: block;
+	padding-bottom: 1em;
+	background: #4a4a4a;
+	font-family: 'Jura', sans-serif;
+}
+
+.title {
+	background: #333;
+	border-bottom: 1px solid #2e2e2e;
+}
+
+.edit-form span {
+	color: white;
+	padding: 1em;
+	display: block;
+	text-align: center;
+}
+
+.event-name {
+	outline: 0;
+	width: 300px;
+	margin: auto;
+	display: block;
+	text-align: center;
+}
+
+.event-description {
+	outline: 0;
+	resize: none;
+	margin: auto;
+	width: 600px;
+	height: 250px;
+	display: block;
+}
+
+.event-type {
+	outline: 0;
+	margin: auto;
+	display: block;
+}
+
+.event-date {
+	width: 30%;
+	margin: auto;
+}
+
+.event-date select {
+	outline: 0;
+}
+
+.choose-file {
+	outline: 0;
+	margin: auto;
+	color: white;
+	display: block;
+}
+
+.submit-file {
+	outline: 0;
+	color: white;
+	padding: 1em;
+	border: none;
+	display: block;
+	font-size: 1em;
+	cursor: pointer;
+	background: #1f7f5c;
+	transition: all 0.15s;
+	margin: 1em auto 0 auto;
+	font-family: 'Jura', sans-serif;
+}
+
+.submit-file:hover {
+	background: rgb(64, 151, 119);
+}
+
+.buttons {
+	height: 3em;
+	width: 44.4%;
+	display: block;
+	margin: 1em auto 0 auto;
+}
+
+.change-event-button {
+	outline: 0;
+	float: left;
+	color: white;
+	border: none;
+	padding: 1em;
+	display: block;
+	font-size: 1em;
+	cursor: pointer;
+	margin-right: 1em;
+	background: #1f7f5c;
+	transition: all 0.15s;
+	font-family: 'Jura', sans-serif;
+}
+
+.change-event-button:hover {
+	background: rgb(64, 151, 119);
+}
+
+.NavigationButton {
+	outline: 0;
+	float: left;
+	color: white;
+	border: none;
+	padding: 1em;
+	display: block;
+	font-size: 1em;
+	cursor: pointer;
+	background: #ee6e73;
+	transition: all 0.15s;
+	font-family: 'Jura', sans-serif;
+}
+
+.NavigationButton:hover {
+	background: #f3989a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

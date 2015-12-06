@@ -155,11 +155,11 @@ body {
 	font-size: 1em;
 	margin: auto;
 	cursor: pointer;
-	background-color: #1f7f5c;
+	background: #ee6e73;
 	transition: all 0.15s;
 	font-family: 'Jura', sans-serif;
 }
 
 .delete_button:hover {
-	background: rgb(64, 151, 119);
+	background: #f3989a;
 }

@@ -21,7 +21,6 @@
 		include 'PHP/joinleaveEvent.php';
 		include 'PHP/addremoveComment.php';
 		include 'PHP/topnav.php';
-		
 	?>
 	
 	<?php

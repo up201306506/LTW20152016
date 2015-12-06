@@ -6,14 +6,8 @@ $global = getdate();
 $months = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ];
 
 function dayOptions() {
-	$g = $GLOBALS['global'];
-	if ($g['mon'] == 1 || $g['mon'] == 3 || $g['mon'] == 5 || $g['mon'] == 7 || $g['mon'] == 8 || $g['mon'] == 10 || $g['mon'] == 12) {
-		for ($i = 1; $i < 32; $i++)
-			echo '<option>' . $i . '</option>';
-	} else {
-		for ($i = 1; $i < 31; $i++)
-			echo '<option>' . $i . '</option>';
-	}
+	for ($i = 1; $i < 32; $i++)
+		echo '<option>' . $i . '</option>';
 }
 
 function monthOptions() {
@@ -31,8 +25,8 @@ function yearOptions() {
 
 function typeOptions() {
 	$type_list = getAllEventTypes();
-	foreach($type_list as $options)
-		echo "<option value='".$options['id']."'>".$options['type']."</option>";
+	foreach ($type_list as $options)
+		echo '<option value="' . $options['id'] . '">' . $options['type'] . '</option>';
 }
 
 ?>

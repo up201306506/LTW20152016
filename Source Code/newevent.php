@@ -26,7 +26,7 @@
 			<span>Name:</span>
 			<input type="text" name="id" class="id">
 			<span>Description:</span>
-			<textarea style="resize:none" name="description" class="description"></textarea>
+			<textarea name="description" class="description"></textarea>
 			<span>Type of event:</span>
 			<select name="type" class="type"><?php typeOptions(); ?></select>
 			<span>Date:</span>
