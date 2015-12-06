@@ -82,7 +82,6 @@
 									<div class="comment-content">
 										<img class="profile-image" src='<?php echo "Images/Users/" . getUserByID($rows['u_id'])['image_path'] . ".jpg";?>'>
 										<a class="comment-name" href=<?php echo $link; ?>><?php echo '   '.getUserByID($rows['u_id'])['user_name'] . ': '; ?></a>
-										<!-- <span class="comment-name"><?php echo '   '.getUserByID($rows['u_id'])['user_name'] . ': '; ?></span> -->
 									</div>
 									<span class="comment-text"><?php echo '   '.$rows['message']; ?></span>
 										<?php 
@@ -104,7 +103,7 @@
 						<input type="hidden" name="Event_ID" value="<?php echo $this_event['id']; ?>"/>
 						<input type="hidden" name="User_ID" value="<?php echo  $_SESSION['user_id']; ?>"/>
 						<input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>">
-						<textarea placeholder="Write a comment..." style="resize:none" name="NewCommentText" class="new-comment-text"></textarea>
+						<textarea name="NewCommentText" class="new-comment-text"></textarea>
 						<input class="new-comment-submit" name="NewComment" type="submit" value="Publish Comment">
 					</form>
 				</div>
