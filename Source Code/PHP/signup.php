@@ -5,8 +5,15 @@ $error = '';
 if (isset($_POST['signup'])) {
 	if (empty($_POST['username_signup']) || empty($_POST['password_signup'])) {
 		$error = 'Username or Password is invalid!';
-	} else {
+	} else {		
 		$username = $_POST['username_signup'];
+		
+		if (existsUserByName($username))
+		{
+			echo '<span id="message">User name '.$username.' is already taken</span>';
+			exit;
+		}
+		
 		$password = $_POST['password_signup'];
 		$options =['cost' => strlen($username)];
 		$hashedpass = password_hash($password, PASSWORD_DEFAULT, $options);

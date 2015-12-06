@@ -18,7 +18,6 @@
 		}
 		include 'PHP/topnav.php';
 		include 'Database/user_connection.php';
-		include 'PHP/changeuser.php';
 		include 'PHP/changepass.php';
 		include 'PHP/changeimage.php';
 	?>
@@ -59,5 +58,6 @@
 			<input type="submit" value="Submit" name="submit_password">
 		</form>
 	</div>
+	<?php include 'PHP/changeuser.php'; ?>
 </body>
 </html>

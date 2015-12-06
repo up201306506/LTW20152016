@@ -118,3 +118,8 @@ body {
 .new-user-form input[type="submit"]:hover, .new-pass-form input[type="submit"]:hover, .new-image-form input[type="submit"]:hover {
     background: rgb(64, 151, 119);
 }
+
+#message{
+	
+	
+}

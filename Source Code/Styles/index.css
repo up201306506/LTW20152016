@@ -104,3 +104,24 @@ input[type="submit"] {
     padding: 15px;
     display: none;
 }
+
+#message{
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 25em;
+    text-align: center;
+    font-family: 'Jura', sans-serif;
+
+    outline: 0;
+    color: white;
+    border: none;
+    padding: 1em;
+    display: block;
+    font-size: 1em;
+    cursor: pointer;
+    background: #1f7f5c;
+    transition: all 0.15s;
+    margin: 1em auto 0 auto;
+}

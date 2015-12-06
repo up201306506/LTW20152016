@@ -1,7 +1,6 @@
 <?php
 include ('PHP/crypto.php');
 include('PHP/login.php');
-include('PHP/signup.php');
 
 if(isset($_SESSION['login_user'])) {
 	header('Location: profile.php');
@@ -50,5 +49,6 @@ if(isset($_SESSION['login_user'])) {
 			</div>
 		</div>
 	</form>
+	<?php include('PHP/signup.php'); ?>
 </body>
 </html>

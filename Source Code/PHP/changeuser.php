@@ -10,6 +10,12 @@ if (isset($_POST['submit_username'])) {
 	} else {
 		$Userid = $_SESSION['user_id'];
 		$newusername = $_POST['newusername'];
+		if (existsUserByName($newusername))
+		{
+			echo '<span id="message">User name '.$newusername.' is already taken</span>';
+			exit;
+		}
+		
 		changeUsername($Userid, $newusername);
 		$_SESSION['login_user'] = $newusername;
 		echo '<script>window.location = "profile.php"</script>';

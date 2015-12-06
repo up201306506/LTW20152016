@@ -1,6 +1,21 @@
 <?php
 
 include 'Database/user_connection.php';
+session_start();
+if(empty($_SESSION)) {
+	header('Location: index.php');
+}
+if (empty($_GET)) {
+	echo '<script>window.location = "profile.php?id=' . $_SESSION['user_id'] . '";</script>';
+	exit;
+}	
+
+$owner = false;
+$userID = $_GET['id'];
+if($_GET['id'] == $_SESSION['user_id']){
+	$owner = true;
+}
+
 $user = getUserByID($_GET['id']);
 
 ?>
@@ -18,20 +33,7 @@ $user = getUserByID($_GET['id']);
 </head>
 <body>
 	<?php
-		session_start();
-		if(empty($_SESSION)) {
-			header('Location: index.php');
-		}
-		if (empty($_GET)) {
-			echo '<script>window.location = "profile.php?id=' . $_SESSION['user_id'] . '";</script>';
-			exit;
-		}	
-		
-		$owner = false;
-		$userID = $_GET['id'];
-		if($_GET['id'] == $_SESSION['user_id']){
-			$owner = true;
-		}
+
 	
 		include 'Database/event_type_connection.php';
 		include 'Database/event_connection.php';

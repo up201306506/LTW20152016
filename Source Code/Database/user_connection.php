@@ -32,6 +32,14 @@ function getUserByUserName($name) {
 	return $result;
 }
 
+function existsUserByName($name) {
+	$db_users = new PDO('sqlite:Database/eventerer.db');
+	$stmt = $db_users->prepare('SELECT * FROM user WHERE user_name = ?');
+	$stmt->execute(array($name));
+	$result = $stmt->fetchAll();
+	return (!empty($result));
+}
+
 function insertIntoUser($username, $password) {
 	$db_users = new PDO('sqlite:Database/eventerer.db');
 	$stmt = $db_users->prepare('INSERT INTO user VALUES (NULL, 0, :user, :pass, "userimage_default")');
