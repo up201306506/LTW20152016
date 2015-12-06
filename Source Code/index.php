@@ -18,7 +18,7 @@ if(isset($_SESSION['login_user'])) {
 	<link href='https://fonts.googleapis.com/css?family=Jura:600' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<img src="Images/Logo2.png">
+	<h1 class="logo">Eventerer</h1>
 	<form class="accordion" action="" method="post">
 		<div class="accordion-section">
 			<a class="accordion-section-title" href="#Login">Log In</a>
