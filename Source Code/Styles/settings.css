@@ -89,7 +89,6 @@ body {
 
 .new-image-form input[type="submit"] {
     outline: 0;
-    margin: auto;
     color: white;
     border: none;
     padding: 1em;
@@ -98,6 +97,7 @@ body {
     cursor: pointer;
     background: #1f7f5c;
     transition: all 0.15s;
+    margin: 1em auto 0 auto;
     font-family: 'Jura', sans-serif;
 }
 

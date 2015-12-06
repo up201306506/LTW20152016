@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Profile</title>
+	<title>Your Profile</title>
 	<script src="JQuery/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="JQuery/profile.js"></script>
 	<link rel="stylesheet" type="text/css" href="Styles/topnav.css">

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Profile</title>
+	<title>Event Editor</title>
 	<link rel="stylesheet" type="text/css" href="Styles/topnav.css">
 	<link rel="stylesheet" type="text/css" href="Styles/editevent.css">
 	<link href='https://fonts.googleapis.com/css?family=Jura:600' rel='stylesheet' type='text/css'>

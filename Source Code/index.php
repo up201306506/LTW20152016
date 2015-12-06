@@ -12,7 +12,7 @@ if(isset($_SESSION['login_user'])) {
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Eventerer™</title>
+	<title>Eventerer</title>
 	<script src="JQuery/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="JQuery/accordion.js"></script>
 	<link rel="stylesheet" type="text/css" href="Styles/index.css">
