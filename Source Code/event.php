@@ -46,6 +46,7 @@
 						<form action="" method="post">
 							<input type="hidden" name="Event_ID" value="<?php echo $this_event['id']; ?>"/>
 							<input type="hidden" name="User_ID" value="<?php echo  $_SESSION['user_id']; ?>"/>
+							<input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>">
 							<?php if(checkIfUserAttends($this_event['id'] , $_SESSION['user_id'])) {?>
 								<input name="LeaveEvent" type="submit" value="Leave Event">
 							<?php } else { ?>
@@ -93,6 +94,7 @@
 									{
 										?>
 										<form action="" method="post">
+											<input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>">
 											<input type="hidden" name="Comment_ID" value="<?php echo $rows['id']; ?>"/>
 											<input name="DeleteComment" type="submit" value="Delete this comment">
 										</form>
@@ -107,6 +109,7 @@
 				<form action="" method="post">
 					<input type="hidden" name="Event_ID" value="<?php echo $this_event['id']; ?>"/>
 					<input type="hidden" name="User_ID" value="<?php echo  $_SESSION['user_id']; ?>"/>
+					<input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>">
 					<textarea style="resize:none" name="NewCommentText" class="NewCommentText"></textarea>
 					<input name="NewComment" type="submit" value="New Comment">
 				</form>
