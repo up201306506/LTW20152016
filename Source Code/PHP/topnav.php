@@ -10,7 +10,7 @@
 		</ul>
 	</li>
 	<li class="search-bar">
-		<form action="searchbar.php" method="get">
+		<form action="searchresults.php" method="get">
 			<input type="text" name="search-text" class="search-text" placeholder="Search Event or User...">
 			<input type="submit" name="search-button" class="search-button">
 		</form>
