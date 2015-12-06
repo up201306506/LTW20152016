@@ -42,7 +42,7 @@ INSERT INTO user VALUES (
 	1,
 	'admin',
 	'$2y$05$iOpT5jCIP/.obs9HUBsfWOr7efW4j8MtuelLvNlCBwXEaqiMp2wCy',
-	'userimage_default'
+	'userimage_1'
 );
 INSERT INTO user VALUES (
 	NULL,
@@ -53,13 +53,13 @@ INSERT INTO user VALUES (
 );
 INSERT INTO events VALUES (
 	NULL, 'Anos do Sr. Vossa Excelência, o Admin', '1',
-	'eventimage_default', '2015-December-5',
+	'eventimage_1', '2015-December-5',
 	'Jantar e depois Cinema no Arrábida',
 	1
 );
 INSERT INTO events VALUES (
 	NULL, 'BEBER ATE MORRER!', '1',
-	'eventimage_default', '2015-December-31',
+	'eventimage_2', '2015-December-31',
 	'Isso queria eu, mas vou passar com os meus avós',
 	6
 );

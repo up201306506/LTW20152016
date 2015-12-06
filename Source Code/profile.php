@@ -17,6 +17,7 @@
 		}
 		if (empty($_GET)) {
 			echo '<script>window.location = "profile.php?id=' . $_SESSION['user_id'] . '";</script>';
+			exit;
 		}	
 		
 		$owner = false;
