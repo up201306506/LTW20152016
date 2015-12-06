@@ -103,9 +103,9 @@ body {
 }
 
 .event-description-label {
-	padding: 1em;
 	display: block;
 	text-align: center;
+	padding: 1em 1em 0 1em;
 }
 
 .event-description {
@@ -117,9 +117,9 @@ body {
 }
 
 .people-going-label {
-	padding: 1em;
 	display: block;
 	text-align: center;
+	padding: 1em 1em 0 1em;
 }
 
 .people-going-list {
@@ -227,6 +227,7 @@ body {
 	width: 500px;
 	margin: auto;
 	display: block;
+	margin-top: 1em;
 	padding-bottom: 5em;
 }
 
