@@ -4,3 +4,85 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
+
+.search-container {
+	width: 700px;
+	color: white;
+	display: block;
+	margin: 1em auto;
+	font-family: 'Jura', sans-serif;
+}
+
+.tabs {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.tabs li {
+	margin: 0;
+	width: 50%;
+	float: left;
+	padding: 1em 0;
+	text-align: center;
+	background-color: #111;
+}
+
+.tabs .current {
+	background-color: #333;
+	border-bottom: 1px solid #2e2e2e;
+}
+
+.tabs li:not(.current):hover {
+	cursor: pointer;
+	transition: all 0.15s;
+	background-color: #4c4c4c;
+}
+
+.tab-content {
+	display: none;
+	background: #333;
+	padding: 4em 1em 1em 1em;
+}
+
+.tab-content.current {
+	display: inherit;
+}
+
+.event-link {
+	color: black;
+	padding: 1em;
+	display: block;
+	text-align: center;
+	background: #e0e0e0;
+	text-decoration: none;
+	transition: all 0.15s;
+	border-bottom: 1em solid #333;
+}
+
+.event-link:last-child {
+	border-bottom: 0;
+}
+
+.event-link:hover {
+	background: #b0b0b0;
+}
+
+.user-link {
+	color: black;
+	padding: 1em;
+	display: block;
+	text-align: center;
+	background: #e0e0e0;
+	text-decoration: none;
+	transition: all 0.15s;
+}
+
+.user-link:hover {
+	background: #b0b0b0;
+}
+
+.no-results {
+	display: block;
+	text-align: center;
+}

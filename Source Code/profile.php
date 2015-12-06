@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Your Profile</title>
 	<script src="JQuery/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="JQuery/profile.js"></script>
+	<script type="text/javascript" src="JQuery/tabs.js"></script>
 	<link rel="stylesheet" type="text/css" href="Styles/topnav.css">
 	<link rel="stylesheet" type="text/css" href="Styles/profile.css">
 	<link href='https://fonts.googleapis.com/css?family=Jura:600' rel='stylesheet' type='text/css'>

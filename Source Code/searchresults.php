@@ -4,9 +4,9 @@
 	<meta charset="utf-8">
 	<title>Search Results</title>
 	<script src="JQuery/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="JQuery/profile.js"></script>
+	<script type="text/javascript" src="JQuery/tabs.js"></script>
 	<link rel="stylesheet" type="text/css" href="Styles/topnav.css">
-	<link rel="stylesheet" type="text/css" href="Styles/search.css">
+	<link rel="stylesheet" type="text/css" href="Styles/searchresults.css">
 	<link href='https://fonts.googleapis.com/css?family=Jura:600' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -23,11 +23,15 @@
 			
 		}
 		include 'PHP/topnav.php';
-		include 'Database/user_connection.php';
-		include 'Database/event_connection.php';
-		include 'Database/event_type_connection.php';
-		include 'PHP/changeuser.php';
-		include 'PHP/changepass.php';	
+		include 'PHP/search.php';
 	?>
+	<div class="search-container">
+		<ul class="tabs">
+			<li class="tab-link current" data-tab="tab-1">Events</li>
+			<li class="tab-link" data-tab="tab-2">Users</li>
+		</ul>
+		<div class="tab-content current" id="tab-1"><?php getSearchedEvents($search); ?></div>
+		<div class="tab-content" id="tab-2"><?php getSearchedUsers($search); ?></div>
+	</div>
 </body>
 </html>
