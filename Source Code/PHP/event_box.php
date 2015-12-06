@@ -23,6 +23,7 @@ function createdEventBox($userID, $owner) {
 				<?php if($owner)
 				{ ?>
 					<form action="" method="post">
+						<input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>">
 						<button name="Delete_button" class="delete_button" value=<?php echo $value; ?>>Cancel Event</button>
 					</form>
 				<?php } ?>
