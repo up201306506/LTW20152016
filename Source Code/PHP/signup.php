@@ -8,9 +8,8 @@ if (isset($_POST['signup'])) {
 	} else {		
 		$username = $_POST['username_signup'];
 		
-		if (existsUserByName($username))
-		{
-			echo '<span id="message">User name '.$username.' is already taken</span>';
+		if (existsUserByName($username)) {
+			echo '<span class="message">User name "'.$username.'" is already taken!</span>';
 			exit;
 		}
 		
@@ -26,7 +25,8 @@ if (isset($_POST['signup'])) {
 		$_SESSION['user_id'] = $user['id'];
 		
 		if (!isset($_SESSION['csrf_token'])) {
-				$_SESSION['csrf'] =getToken(16);}
+			$_SESSION['csrf'] =getToken(16);
+		}
 		
 		echo '<script>window.location = "profile.php"</script>';
 	}

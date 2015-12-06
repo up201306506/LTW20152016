@@ -12,7 +12,7 @@ if (isset($_POST['submit_username'])) {
 		$newusername = $_POST['newusername'];
 		if (existsUserByName($newusername))
 		{
-			echo '<span id="message">User name '.$newusername.' is already taken</span>';
+			echo '<span class="message">Username "' . $newusername . '" is already taken!</span>';
 			exit;
 		}
 		

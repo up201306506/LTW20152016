@@ -49,6 +49,6 @@ if(isset($_SESSION['login_user'])) {
 			</div>
 		</div>
 	</form>
-	<?php include('PHP/signup.php'); ?>
+	<?php include 'PHP/signup.php'; ?>
 </body>
 </html>

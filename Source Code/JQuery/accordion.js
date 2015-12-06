@@ -9,8 +9,8 @@ $(document).ready(function() {
         var currentAttrValue = $(this).attr('href');
  
         if($(e.target).is('.active')) {
-            close_accordion_section();
-        }else {
+            // close_accordion_section();
+        } else {
             close_accordion_section();
             // Add active class to section title
             $(this).addClass('active');

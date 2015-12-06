@@ -115,7 +115,17 @@ body {
     background: rgb(64, 151, 119);
 }
 
-#message{
-	
-	
+.message {
+    color: red;
+    font-size: 1em;
+    display: block;
+    text-align: center;
+    margin-top: 15em;
+    font-family: 'Jura', sans-serif;
 }
+
+
+
+
+
+
