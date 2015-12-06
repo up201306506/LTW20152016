@@ -3,7 +3,9 @@
 $error = '';
 
 if (isset($_POST['submit_username'])) {
-	if (empty($_POST['newusername']) || empty($_POST['password1']) || (getUserByID($_SESSION['user_id'])['password'] != $_POST['password1'])) {
+	if (empty($_POST['newusername']) || empty($_POST['password1']) || 
+		(!password_verify($_POST['password1'], getUserByID($_SESSION['user_id'])['password']))) 
+	{
 		$error = 'Username is invalid!';
 	} else {
 		$Userid = $_SESSION['user_id'];

@@ -38,6 +38,7 @@
 				</div>
 			</div>
 		</div>
+		<input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>">
 		<input type="submit" value="Submit" name="Event_Submit" class="event_submit">
 	</form>
 	<?php

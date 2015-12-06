@@ -29,6 +29,7 @@
 				<label for="newimage">Upload File:</label>
 				<input id="newimage" name="newimage" type="file">
 			</div>
+			<input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>">
 			<input type="submit" value="Submit" name="submit_image">
 		</form>
 		<form class="new-user-form" action="" method="post">
@@ -38,9 +39,10 @@
 				<input type="password" id="password1" name="password1">
 			</div>
 			<div class="text">
-				<label for="password1">New Username:</label>
+				<label for="newusername">New Username:</label>
 				<input type="text" id="newusername" name="newusername">
 			</div>
+			<input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>">
 			<input type="submit" value="Submit" name="submit_username">
 		</form>
 		<form class="new-pass-form" action="" method="post">
@@ -53,6 +55,7 @@
 				<label for="newpassword">New Password:</label>
 				<input type="password" id="newpassword" name="newpassword">
 			</div>
+			<input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']; ?>">
 			<input type="submit" value="Submit" name="submit_password">
 		</form>
 	</div>

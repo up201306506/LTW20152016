@@ -2,7 +2,7 @@
 
 $once = true;
 
-if (isset($_POST['Event_Submit']) and $once == true) {
+if (isset($_POST['Event_Submit']) and $once == true  && $_SESSION['csrf'] == $_POST['csrf']) {
 	if (empty($_POST['day']) || empty($_POST['month']) || empty($_POST['year']) || empty($_POST['type'])  
 		|| empty($_POST['description']) || empty($_POST['id'])) {
 	?>
